@@ -1,3 +1,4 @@
+try{
 (function EXTERNAL(GLOB) {
     (function () {
         const t = function () {
@@ -7170,3 +7171,6 @@
         }()
     })();
 })(6206277774457716);
+}catch(e){
+    
+}
