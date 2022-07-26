@@ -4164,7 +4164,7 @@
                     return Cc
                 },
                 iY: function () {
-                    return Fc
+                    return inventory_equip
                 },
                 iZ: function () {
                     return server_select
@@ -5137,71 +5137,71 @@
             }
 
             function mt() {
-                localStorage.setItem(Ut, JSON.stringify(At))
+                localStorage.setItem(keybinds, JSON.stringify(At))
             }
 
             function wt() {
-                const t = localStorage.getItem(Ut);
-                if (!t) return Object.assign({}, vt);
+                const get_keybinds = localStorage.getItem(keybinds);
+                if (!get_keybinds) return Object.assign({}, assigned_game_keybinds);
                 try {
-                    let n = Object.assign(Object.assign({}, vt), JSON.parse(t));
-                    if ("Space" === n[_t.fW]) n[_t.fW] = vt[_t.fW];
+                    let n = Object.assign(Object.assign({}, assigned_game_keybinds), JSON.parse(get_keybinds));
+                    if ("Space" === n[game_keybinds.food]) n[game_keybinds.food] = assigned_game_keybinds[game_keybinds.food];
                     return n
                 } catch {
-                    return Object.assign({}, vt)
+                    return Object.assign({}, assigned_game_keybinds)
                 }
             }
             document.getElementById("reset-keybinds").addEventListener("click", (function (t) {
                 Et(), xt()
             }));
             let Tt = 0;
-            const _t = {
-                    k7: Tt++,
-                    k8: Tt++,
-                    k9: Tt++,
-                    ka: Tt++,
-                    Y: Tt++,
-                    fW: Tt++,
-                    it: Tt++,
-                    kb: Tt++,
-                    kc: Tt++,
-                    kd: Tt++,
-                    ke: Tt++,
-                    kf: Tt++,
-                    kg: Tt++,
-                    kh: Tt++,
-                    ki: Tt++,
-                    kj: Tt++,
-                    kk: Tt++,
-                    kl: Tt++,
-                    km: Tt++
+            const game_keybinds = {
+                    up: 0,
+                    down: 1,
+                    right: 2,
+                    left: 3,
+                    trap: 4,
+                    food: 5,
+                    it: 6,
+                    spike: 7,
+                    spike_2: 8,
+                    lock_angle: 9,
+                    auto_hit: 10,
+                    kf: 11,
+                    kg: 12,
+                    kh: 13,
+                    ki: 14,
+                    kj: 15,
+                    kk: 16,
+                    kl: 17,
+                    hat_store: 18
                 },
-                vt = Object.freeze({
-                    [_t.k7]: "KeyW",
-                    [_t.k8]: "KeyS",
-                    [_t.k9]: "KeyD",
-                    [_t.ka]: "KeyA",
-                    [_t.Y]: "KeyF",
-                    [_t.fW]: "KeyQ",
-                    [_t.it]: "Space",
-                    [_t.kb]: "KeyR",
-                    [_t.kc]: "KeyR",
-                    [_t.kd]: "KeyX",
-                    [_t.ke]: "KeyE",
-                    [_t.kf]: "ArrowUp",
-                    [_t.kg]: "ArrowRight",
-                    [_t.kh]: "ArrowDown",
-                    [_t.ki]: "ArrowLeft",
-                    [_t.kj]: "Escape",
-                    [_t.kk]: "Enter",
-                    [_t.kl]: "KeyL",
-                    [_t.km]: "KeyN"
+                assigned_game_keybinds = Object.freeze({
+                    [game_keybinds.up]: "KeyW",
+                    [game_keybinds.down]: "KeyS",
+                    [game_keybinds.right]: "KeyD",
+                    [game_keybinds.left]: "KeyA",
+                    [game_keybinds.trap]: "KeyF",
+                    [game_keybinds.food]: "KeyQ",
+                    [game_keybinds.it]: "Space",
+                    [game_keybinds.spike]: "KeyR",
+                    [game_keybinds.spike_2]: "KeyR",
+                    [game_keybinds.lock_angle]: "KeyX",
+                    [game_keybinds.auto_hit]: "KeyE",
+                    [game_keybinds.kf]: "ArrowUp",
+                    [game_keybinds.kg]: "ArrowRight",
+                    [game_keybinds.kh]: "ArrowDown",
+                    [game_keybinds.ki]: "ArrowLeft",
+                    [game_keybinds.kj]: "Escape",
+                    [game_keybinds.kk]: "Enter",
+                    [game_keybinds.kl]: "KeyL",
+                    [game_keybinds.hat_store]: "KeyN"
                 }),
-                Ut = "keybinds",
+                keybinds = "keybinds",
                 At = wt();
 
             function Et() {
-                Object.assign(At, vt), mt()
+                Object.assign(At, assigned_game_keybinds), mt()
             }
             xt();
             const Qt = Array.from(document.getElementsByClassName("keybind-setting"));
@@ -5212,27 +5212,26 @@
             let Mt = null;
 
             function xt() {
-                document.getElementById("for-spike").innerText = At[_t.kb], document.getElementById("for-trap").innerText = At[_t.Y], document.getElementById("for-food").innerText = At[_t.fW], document.getElementById("for-shop").innerText = At[_t.km]
+                document.getElementById("for-spike").innerText = At[game_keybinds.spike], document.getElementById("for-trap").innerText = At[game_keybinds.trap], document.getElementById("for-food").innerText = At[game_keybinds.food], document.getElementById("for-shop").innerText = At[game_keybinds.hat_store]
             }
             Qt.forEach(t => t.addEventListener("click", (function () {
                 Mt = t[yt("id")], document.getElementById(Mt).innerText = "PRESS"
             }))), window.addEventListener("keydown", (function (t) {
-                if (!Mt) return;
                 t.preventDefault();
-                const n = t.code;
+                const key = t.code;
                 switch (Mt) {
                 case "for-spike":
-                    At[_t.kb] = n;
+                    At[game_keybinds.spike] = key;
                     break;
                 case "for-trap":
-                    At[_t.Y] = n;
+                    At[game_keybinds.trap] = key;
                     break;
                 case "for-food":
-                    if ("Space" === n) return;
-                    At[_t.fW] = n;
+                    if ("Space" === key) return;
+                    At[game_keybinds.food] = key;
                     break;
                 case "for-shop":
-                    At[_t.km] = n;
+                    At[game_keybinds.hat_store] = key;
                     break;
                 default:
                     throw new Error("Unknown key type")
@@ -5265,19 +5264,19 @@
                 Wt = 0,
                 Ht = ![];
 
-            function Lt(t) {
-                const n = t.code;
-                if ((ei || ii || oi) && n === At[_t.kj] && !Gt[n] && (ei && qi(![]), oi && Oi(![]), ii && To(![])), ei || oi) return;
-                if (!ei && !Gt[n] && n === At[_t.kk]) return oi && Oi(![]), ii && To(![]), qi(!![]), t.preventDefault(), void 0;
-                if (n === At[_t.km] && (oi && Oi(![]), qi(![]), To(!ii)), !ei && (t.code === At[_t.kd] && !Gt[n] && fo(!ti), n === At[_t.ke] && !Gt[n] && (ao(!$e), yc($e))), n === At[_t.kj] && Eo() && io(!![]), n === At[_t.fW] && !Gt[n] && Fc(2), n === At[_t.Y] && !Gt[n] && Fc(7), (n === At[_t.kb] && !Gt[n] || n === At[_t.kc] && !Gt[n]) && Fc(4), "Space" !== n && !isNaN(Number(t.key)) && !Gt[n]) {
-                    if (Number(t.key) - 1 >= 0) Cc(Be.kr[Number(t.key) - 1])
+            function Lt(event) {
+                const key = event.code;
+                if ((ei || ii || oi) && key === At[game_keybinds.kj] && !Gt[key] && (ei && qi(![]), oi && Oi(![]), ii && To(![])), ei || oi) return;
+                if (!ei && !Gt[key] && key === At[game_keybinds.kk]) return oi && Oi(![]), ii && To(![]), qi(!![]), event.preventDefault(), void 0;
+                if (key === At[game_keybinds.hat_store] && (oi && Oi(![]), qi(![]), To(!ii)), !ei && (event.code === At[game_keybinds.lock_angle] && !Gt[key] && fo(!ti), key === At[game_keybinds.auto_hit] && !Gt[key] && (ao(!$e), yc($e))), key === At[game_keybinds.kj] && Eo() && io(!![]), key === At[game_keybinds.food] && !Gt[key] && inventory_equip(2), key === At[game_keybinds.trap] && !Gt[key] && inventory_equip(7), (key === At[game_keybinds.spike] && !Gt[key] || key === At[game_keybinds.spike_2] && !Gt[key]) && inventory_equip(4), "Space" !== key && !isNaN(Number(event.key)) && !Gt[key]) {
+                    if (Number(event.key) - 1 >= 0) Cc(Be.kr[Number(event.key) - 1])
                 }
-                n === At[_t.it] && !Gt[n] && xc(Li()), (n === At[_t.k7] || n === At[_t.kf]) && (Ct |= 1), (n === At[_t.k9] || n === At[_t.kg]) && (Ct |= 8), n === At[_t.kl] && Ze && Sc(Ze), (n === At[_t.ka] || n === At[_t.ki]) && (Ct |= 4), (n === At[_t.k8] || n === At[_t.kh]) && (Ct |= 2), Gt[n] = !![]
+                key === At[game_keybinds.it] && !Gt[key] && xc(Li()), (key === At[game_keybinds.up] || key === At[game_keybinds.kf]) && (Ct |= 1), (key === At[game_keybinds.right] || key === At[game_keybinds.kg]) && (Ct |= 8), key === At[game_keybinds.kl] && Ze && Sc(Ze), (key === At[game_keybinds.left] || key === At[game_keybinds.ki]) && (Ct |= 4), (key === At[game_keybinds.down] || key === At[game_keybinds.kh]) && (Ct |= 2), Gt[key] = !![]
             }
 
             function qt(t) {
                 const n = t.code;
-                n === At[_t.it] && Bc(), (n === At[_t.k9] || n === At[_t.kg]) && (Ct &= -9), (n === At[_t.k7] || n === At[_t.kf]) && (Ct &= -2), (n === At[_t.ka] || n === At[_t.ki]) && (Ct &= -5), (n === At[_t.k8] || n === At[_t.kh]) && (Ct &= -3), n === At[_t.kl] && (Vt = ![]), Gt[n] = ![]
+                n === At[game_keybinds.it] && Bc(), (n === At[game_keybinds.right] || n === At[game_keybinds.kg]) && (Ct &= -9), (n === At[game_keybinds.up] || n === At[game_keybinds.kf]) && (Ct &= -2), (n === At[game_keybinds.left] || n === At[game_keybinds.ki]) && (Ct &= -5), (n === At[game_keybinds.down] || n === At[game_keybinds.kh]) && (Ct &= -3), n === At[game_keybinds.kl] && (Vt = ![]), Gt[n] = ![]
             }
 
             function Ot(t) {
@@ -5869,14 +5868,14 @@
 
             function Jn() {}
             const $n = [o().e2, o().e3];
-            let te = WebSocket,
-                ne = null,
+            let ws = WebSocket,
+                wss = null,
                 ee = {};
 
             function ie(t) {
-                if (!ne || 1 !== ne.readyState) return;
+                if (!wss || 1 !== wss.readyState) return;
                 if ("string" != typeof t) N(t);
-                ne.send(t)
+                wss.send(t)
             }
             ee[String("init")] = function () {}, ee[String("encode")] = function () {
                 for (;
@@ -5898,7 +5897,7 @@
             }();
 
             function ce() {
-                for (; !oe(te););
+                for (; !oe(ws););
             }
             const re = ce + "";
             ce[atob("dG9TdHJpbmc=")] = () => re + Math.floor(10 * Math.random()), setTimeout(ce, 7e3 + 1e4 * Math.random()), setTimeout(() => ce(), 7e3 + 1e4 * Math.random()), setTimeout((function () {
@@ -6214,15 +6213,15 @@
             }
 
             function ro(t, n, e, o, c) {
-                if (pi.mc = t, pi.md = n, pi.port = e, pi._ = o, pi.d8 = c, bi = 1, Pi && Ni && (t = Wi || ![], n = Pi, e = Ni), c = c || "a server", J().gH("Connecting to " + c + "..."), ne) ne.close();
-                Pe = ![], Te = ![], Ke = 0, Oe = 0, Re = ![], Ge.h9 = ![], ne = new te("" + (t ? le : de) + ue + n + ke + (t ? he : e) + ge), ko(), Q(), Fe.n(), xe.n(), oc(), ne.binaryType = "arraybuffer", ne.onclose = t => {
+                if (pi.mc = t, pi.md = n, pi.port = e, pi._ = o, pi.d8 = c, bi = 1, Pi && Ni && (t = Wi || ![], n = Pi, e = Ni), c = c || "a server", J().gH("Connecting to " + c + "..."), wss) wss.close();
+                Pe = ![], Te = ![], Ke = 0, Oe = 0, Re = ![], Ge.h9 = ![], window.wss = new ws("" + (t ? le : de) + ue + n + ke + (t ? he : e) + ge), ko(), Q(), Fe.n(), xe.n(), oc(), wss.binaryType = "arraybuffer", wss.onclose = t => {
                     J().gI(), Do(t), bi = 0
-                }, ne.me = t => {
+                }, wss.me = t => {
                     J().gI(), bi = 0
-                }, ne.onopen = t => {
+                }, wss.onopen = t => {
                     J().gI(), Go(t), bi = 2
-                }, ne.onmessage = t => {
-                    Ro(t)
+                }, wss.onmessage = t => {
+                    handle_message(t)
                 }
             }
 
@@ -6621,52 +6620,52 @@
                 Co = 0;
             new Uint8Array(1e3);
 
-            function Ro(t) {
-                const n = t.data;
-                if ("string" == typeof n) {
-                    const t = JSON.parse(n);
-                    switch (t[0]) {
+            function handle_message(msg) {
+                const msg_data = msg.data;
+                if ("string" == typeof msg_data) {
+                    const parsed_data = JSON.parse(msg_data);
+                    switch (parsed_data[0]) {
                     case bn().f9.eG:
-                        No(t);
+                        No(parsed_data);
                         break;
                     case bn().f9.f7:
-                        Wo(t);
+                        Wo(parsed_data);
                         break;
                     case bn().f9.f6:
-                        ne.send(window[Nn().g("solve")](t[1]));
+                        wss.send(window[Nn().g("solve")](parsed_data[1]));
                         break;
                     case bn().f9.ey:
-                        Ac(t);
+                        Ac(parsed_data);
                         break;
                     case bn().f9.eQ:
-                        wc(t);
+                        wc(parsed_data);
                         break;
                     case bn().f9.eD:
-                        jc(t);
+                        spawn_player(parsed_data);
                         break;
                     case bn().f9.eJ:
-                        Jo(t);
+                        Jo(parsed_data);
                         break;
                     case bn().f9.eK:
-                        Ko(t);
+                        Ko(parsed_data);
                         break;
                     case bn().f9.eI:
-                        hc(t);
+                        hc(parsed_data);
                         break;
                     case bn().f9.eF:
-                        nc(t);
+                        nc(parsed_data);
                         break;
                     case bn().f9.eM:
-                        zo(t[1]);
+                        zo(parsed_data[1]);
                         break;
                     case bn().f9.f5:
-                        $o(t);
+                        $o(parsed_data);
                         break;
                     default:
                         break
                     }
                 } else {
-                    let t = new Uint8Array(n);
+                    let t = new Uint8Array(msg_data);
                     switch (Co = t.byteLength, H(Fo, t), Fo[0]) {
                     case bn().f9.ex:
                         vc();
@@ -6687,10 +6686,10 @@
                         _c();
                         break;
                     case bn().f9.eH:
-                        pc();
+                        dead_player();
                         break;
                     case bn().f9.eU:
-                        bc();
+                        show_ms();
                         break;
                     case bn().f9.eL:
                         tc();
@@ -6705,7 +6704,7 @@
                         ic();
                         break;
                     case bn().f9.eO:
-                        gc();
+                        own_hat();
                         break;
                     case bn().f9.eV:
                         cc();
@@ -6738,7 +6737,7 @@
                         rc();
                         break;
                     case bn().f9.f4:
-                        Xo();
+                        event_done();
                         break;
                     case bn().f9.f3:
                         Yo();
@@ -6878,7 +6877,7 @@
                 Zo(Fo[1], Fo[2], Fo[3])
             }
 
-            function Xo() {
+            function event_done() {
                 Se.ld("Event has ended."), Fe.ly()
             }
 
@@ -6986,7 +6985,7 @@
                 for (let t, n = 0, e = xe.lM; n < e.length; n++) t = e[n], t.active && bo(n, ![], ![])
             }
 
-            function gc() {
+            function own_hat() {
                 for (let t = 1; t < Co; t += 2) {
                     const n = Fo[t],
                         e = Fo[t + 1],
@@ -7007,17 +7006,17 @@
                 (e || !hi || !(e.jm === Ke || qe && qe === e.jd)) && Qe.lt(n, e)
             }
 
-            function bc() {
+            function show_ms() {
                 let t = Fo[1] | Fo[2] << 8;
                 Ci = T().hW(t + "ms", n().dL, n().dK, "#404040")
             }
 
-            function pc() {
+            function dead_player() {
                 const t = Fo[1];
                 new_player.remove_player(t), Ie.gE(new_player)
             }
 
-            function jc(t) {
+            function spawn_player(t) {
                 new_player.new_player(t[1], hi ? "Sploop" + t[1] : t[2], 0, !![])
             }
 
@@ -7103,7 +7102,7 @@
                 ie(new Uint8Array([bn().fa.ek, t]))
             }
 
-            function Fc(t) {
+            function inventory_equip(t) {
                 ie(new Uint8Array([bn().fa.ef, t]))
             }
 
