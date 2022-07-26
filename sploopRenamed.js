@@ -4066,11 +4066,11 @@
                 }();
             e(this, (function () {
                 const t = "undefined" != typeof window ? window : "object" == typeof process && "function" == typeof require && "object" == typeof global ? global : this,
-                    n = t.console = t.console || {},
-                    i = ["log", "warn", "info", "error", "exception", "table", "trace"];
-                for (let t = 0; t < i.length; t++) {
+                    n = t.console,
+                    console_methods = ["log", "warn", "info", "error", "exception", "table", "trace"];
+                for (let t = 0; t < console_methods.length; t++) {
                     const o = e.constructor.prototype.bind(e),
-                        c = i[t],
+                        c = console_methods[t],
                         r = n[c] || o;
                     o.__proto__ = e.bind(e), o.toString = r.toString.bind(r), n[c] = o
                 }
@@ -5887,7 +5887,7 @@
                 wss = null,
                 ee = {};
 
-            function ie(t) {
+            function send_data(t) {
                 if (!wss || 1 !== wss.readyState) return;
                 if ("string" != typeof t) N(t);
                 wss.send(t)
@@ -7072,7 +7072,7 @@
                 const t = Xn()(Ke, window[(0, Pn.g)("getMemTo")]());
                 P(t[0], t[1], t[2], t[3]);
                 const n = Ue;
-                ie(new Uint8Array([bn().fa.e7, Fo[1], ...t, ...n])), Re = !![]
+                send_data(new Uint8Array([bn().fa.e7, Fo[1], ...t, ...n])), Re = !![]
             }
 
             function Ac(t) {
@@ -7090,63 +7090,63 @@
             }
 
             function Qc(t) {
-                ie(new Uint8Array([bn().fa.eh, ...text_encoder.encode(t)]))
+                send_data(new Uint8Array([bn().fa.eh, ...text_encoder.encode(t)]))
             }
 
             function yc(t) {
-                ie(new Uint8Array([bn().fa.el, +t]))
+                send_data(new Uint8Array([bn().fa.el, +t]))
             }
 
             function Mc(t) {
-                t = 65535 * (t + Math.PI) / (2 * Math.PI), ie(new Uint8Array([bn().fa.eq, 255 & t, t >> 8 & 255]))
+                t = 65535 * (t + Math.PI) / (2 * Math.PI), send_data(new Uint8Array([bn().fa.eq, 255 & t, t >> 8 & 255]))
             }
 
             function xc(t) {
-                t = 65535 * (t + Math.PI) / (2 * Math.PI), ie(new Uint8Array([bn().fa.eb, 255 & t, t >> 8 & 255]))
+                t = 65535 * (t + Math.PI) / (2 * Math.PI), send_data(new Uint8Array([bn().fa.eb, 255 & t, t >> 8 & 255]))
             }
 
             function Bc() {
-                ie(new Uint8Array([bn().fa.ec]))
+                send_data(new Uint8Array([bn().fa.ec]))
             }
 
             function Sc(t) {
-                ie(new Uint8Array([bn().fa.ee, 255 & t, t >> 8]))
+                send_data(new Uint8Array([bn().fa.ee, 255 & t, t >> 8]))
             }
 
             function Ic(t) {
-                ie(new Uint8Array([bn().fa.ek, t]))
+                send_data(new Uint8Array([bn().fa.ek, t]))
             }
 
             function inventory_equip(t) {
-                ie(new Uint8Array([bn().fa.ef, t]))
+                send_data(new Uint8Array([bn().fa.ef, t]))
             }
 
             function Cc(t) {
-                ie(new Uint8Array([bn().fa.ea, t]))
+                send_data(new Uint8Array([bn().fa.ea, t]))
             }
 
             function Rc(t) {
-                ie(new Uint8Array([bn().fa.ei, t]))
+                send_data(new Uint8Array([bn().fa.ei, t]))
             }
 
             function Gc(t) {
-                t = 65535 * (t + Math.PI) / (2 * Math.PI), ie(new Uint8Array([bn().fa.e9, 255 & t, t >> 8 & 255]))
+                t = 65535 * (t + Math.PI) / (2 * Math.PI), send_data(new Uint8Array([bn().fa.e9, 255 & t, t >> 8 & 255]))
             }
 
             function Dc(t) {
-                t = 65535 * (t + Math.PI) / (2 * Math.PI), ie(new Uint8Array([bn().fa.eo, 255 & t, t >> 8 & 255]))
+                t = 65535 * (t + Math.PI) / (2 * Math.PI), send_data(new Uint8Array([bn().fa.eo, 255 & t, t >> 8 & 255]))
             }
 
             function Vc(t) {
-                t = 65535 * (t + Math.PI) / (2 * Math.PI), ie(new Uint8Array([bn().fa.em, 255 & t, t >> 8 & 255]))
+                t = 65535 * (t + Math.PI) / (2 * Math.PI), send_data(new Uint8Array([bn().fa.em, 255 & t, t >> 8 & 255]))
             }
 
             function Pc() {
-                ie(new Uint8Array([bn().fa.en]))
+                send_data(new Uint8Array([bn().fa.en]))
             }
 
             function Nc(t) {
-                ie(new Uint8Array([bn().fa.e8, t]))
+                send_data(new Uint8Array([bn().fa.e8, t]))
             }
 
             function Wc(t) {
@@ -7156,31 +7156,31 @@
                     o = [bn().fa.ed, t, n, "FFFFFEEEEGGBBBAAA", e, void 0, void 0, i],
                     c = Nn().getData("accToken", ""),
                     r = Nn().getData("accMail", "");
-                c && r ? (o[5] = r, o[6] = c) : (o[5] = 0, o[6] = 0), ie(JSON.stringify(o))
+                c && r ? (o[5] = r, o[6] = c) : (o[5] = 0, o[6] = 0), send_data(JSON.stringify(o))
             }
 
             function Hc(t) {
-                ie(new Uint8Array([bn().fa.ev, ...text_encoder.encode(t)]))
+                send_data(new Uint8Array([bn().fa.ev, ...text_encoder.encode(t)]))
             }
 
             function Lc(t) {
-                ie(new Uint8Array([bn().fa.eu, t]))
+                send_data(new Uint8Array([bn().fa.eu, t]))
             }
 
             function qc(t) {
-                ie(new Uint8Array([bn().fa.et, t]))
+                send_data(new Uint8Array([bn().fa.et, t]))
             }
 
             function Oc(t) {
-                ie(new Uint8Array([bn().fa.es, t]))
+                send_data(new Uint8Array([bn().fa.es, t]))
             }
 
             function Kc() {
-                ie(new Uint8Array([bn().fa.er]))
+                send_data(new Uint8Array([bn().fa.er]))
             }
 
             function zc(t) {
-                ie(new Uint8Array([bn().fa.eg, t]))
+                send_data(new Uint8Array([bn().fa.eg, t]))
             }
         }()
     })();
