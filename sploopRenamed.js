@@ -1,6 +1,21 @@
 try{
 (function EXTERNAL(GLOB) {
-    (function () {
+    function c(t) {
+        function n(t) {
+            if ("string" == typeof t) {
+                return function () {
+                    for (;
+                        [];);
+                }()
+            } else if (1 !== ("" + t / t).length || t % 20 == 0) debugger;
+            else debugger;
+            n(++t)
+        }
+        try {
+            if (t) return n;
+            else n(0)
+        } catch (t) {}
+    }(function () {
         const t = function () {
                 let t = !![];
                 return function (n, e) {
