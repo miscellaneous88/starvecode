@@ -1,20 +1,5 @@
 (function EXTERNAL(GLOB) {
-    function c(t) {
-        function n(t) {
-            if ("string" == typeof t) {
-                return function () {
-                    for (;
-                        [];);
-                }()
-            } else if (1 !== ("" + t / t).length || t % 20 == 0) debugger;
-            else debugger;
-            n(++t)
-        }
-        try {
-            if (t) return n;
-            else n(0)
-        } catch (t) {}
-    }(function () {
+    (function () {
         const t = function () {
                 let t = !![];
                 return function (n, e) {
@@ -60,7 +45,7 @@
             Uint8Array = Uint8Array,
             atob = atob,
             WebSocket = WebSocket;
-        var k = {
+        var functions = {
                 9582: function (t, n, e) {
                     const o = function () {
                         let t = 0,
@@ -871,15 +856,15 @@
                 1759: function (t, n, e) {
                     const o = e(3877),
                         c = e(6466),
-                        r = [];
-                    r[o.d3] = {}, r[o.d4] = {
+                        hats = [];
+                    hats[o.d3] = {}, hats[o.d4] = {
                         d5: c.bx,
                         d6: 250,
                         d7: 0,
                         description: "Become a bush",
                         d8: "Bush Hat",
                         d9: !![]
-                    }, r[o.da] = {
+                    }, hats[o.da] = {
                         d5: c.ar,
                         d6: 5e3,
                         description: "Increased melee damage",
@@ -887,14 +872,14 @@
                         db: 1.25,
                         dc: .85,
                         d8: "Berserker Gear"
-                    }, r[o.dd] = {
+                    }, hats[o.dd] = {
                         d5: c.au,
                         d6: 3e3,
                         description: "Regenerate health",
                         d7: 13,
                         de: 25,
                         d8: "Jungle Gear"
-                    }, r[o.df] = {
+                    }, hats[o.df] = {
                         d5: c.av,
                         d6: 5e3,
                         description: "Receive reduced damage",
@@ -902,14 +887,14 @@
                         dg: .75,
                         dc: .95,
                         d8: "Crystal Gear"
-                    }, r[o.dh] = {
+                    }, hats[o.dh] = {
                         d5: c.ay,
                         d6: 1e3,
                         description: "Attacker's receive damage",
                         d7: 10,
                         di: .45,
                         d8: "Spike Gear"
-                    }, r[o.dj] = {
+                    }, hats[o.dj] = {
                         d5: c.az,
                         d6: 4e3,
                         description: "Gain more health",
@@ -917,21 +902,21 @@
                         dk: 150,
                         dg: 3 / 4,
                         d8: "Immunity Gear"
-                    }, r[o.dl] = {
+                    }, hats[o.dl] = {
                         d5: c.aA,
                         d6: 1500,
                         description: "Move quicker",
                         d7: 23,
                         dc: 1.23,
                         d8: "Boost Hat"
-                    }, r[o.dm] = {
+                    }, hats[o.dm] = {
                         d5: c.bh,
                         d6: 150,
                         description: "Apples become more succulent",
                         d7: 5,
                         dc: 1.05,
                         d8: "Apple hat"
-                    }, r[o.dn] = {
+                    }, hats[o.dn] = {
                         d5: c.bJ,
                         d6: 4e3,
                         description: "Move fast in ocean",
@@ -939,21 +924,21 @@
                         dc: .75,
                         dp: 1.5,
                         d8: "Scuba Gear"
-                    }, r[o.dq] = {
+                    }, hats[o.dq] = {
                         d5: c.bO,
                         d6: 3500,
                         description: "Become invisible when still",
                         d7: 5,
                         d8: "Hood",
                         d9: !![]
-                    }, r[o.dr] = {
+                    }, hats[o.dr] = {
                         d5: c.cX,
                         d6: 4e3,
                         description: "Destroy buildings faster",
                         d7: 10,
                         d8: "Demolist",
                         dc: .3
-                    }, t.exports = r
+                    }, t.exports = hats
                 },
                 5172: function (t, n, e) {
                     try {
@@ -1007,9 +992,9 @@
                     d()
                 },
                 7380: function (t) {
-                    const n = {
-                        dz: 1824,
-                        dA: 1026,
+                    const game_properties = {
+                        width: 1824,
+                        height: 1026,
                         dB: 130,
                         dC: 9,
                         dD: 1 / 3,
@@ -1020,7 +1005,7 @@
                         dH: 1e4,
                         dI: 1e4
                     };
-                    n.dJ = Math.PI / 2, n.max_players = 255, n.dK = "#FFFFFF", n.dL = 28, n.dM = 70, n.dN = 60, n.dO = 240, n.dP = 17, n.dQ = "#FFFFFF", n.dR = 5, n.dS = "#2D3030", n.dT = 1 / 12, n.dU = [0, 0, 0, 100, 30, 8, 2, 12, 32, 1, 2], n.dV = 2e3, n.dW = 5e3, n.dX = 1e4, n.dY = ![], t.exports = n
+                    game_properties.dJ = Math.PI / 2, game_properties.max_players = 255, game_properties.dK = "#FFFFFF", game_properties.dL = 28, game_properties.dM = 70, game_properties.dN = 60, game_properties.dO = 240, game_properties.dP = 17, game_properties.dQ = "#FFFFFF", game_properties.dR = 5, game_properties.dS = "#2D3030", game_properties.dT = 1 / 12, game_properties.dU = [0, 0, 0, 100, 30, 8, 2, 12, 32, 1, 2], game_properties.dV = 2e3, game_properties.dW = 5e3, game_properties.dX = 1e4, game_properties.dY = ![], t.exports = game_properties
                 },
                 6350: function (t) {
                     t.exports = function (t, n) {
@@ -1491,12 +1476,12 @@
                 },
                 3936: function (t) {
                     const n = 0,
-                        e = [];
-                    e[0] = ["Sploop Classic", 0, n], e[1] = ["Yellow Classic", 0, n], e[2] = ["Brown Classic", 0, n], e[3] = ["Pink Classic", 0, n], e[4] = ["Blue Classic", 0, n], e[5] = ["Green Classic", 0, n], e[6] = ["White Cat", 0, 100], e[7] = ["Ginger Cat", 0, 100], e[8] = ["Pit Bull", 0, 150], e[9] = ["Pig", 0, 100], e[10] = ["Crocodile", 0, 200], e[11] = ["Fox", 0, 200], e[12] = ["Panda", 0, 300], e[13] = ["Bear", 0, 300], e[14] = ["Penguin", 0, 300], e[15] = ["Cactus", 0, 400], e[16] = ["Strawberry", 0, 800], e[17] = ["Wolf", 0, 400], e[18] = ["Mammoth", 0, 2e3], e[19] = ["Golden Cow", 0, 3e3], e[20] = ["Shark", 0, 1e3], e[21] = ["Apple", 0, 200], e[22] = ["Stone", 0, 500], e[23] = ["Cave Stone", 0, 600], e[24] = ["Ice", 0, 700], e[25] = ["Gold", 0, 800], e[26] = ["Cow", 0, 350], e[27] = ["Dragon", 0, 5e3], e[28] = ["Black Ice", 0, 1e3], e[29] = ["Magma", 0, 1500], e[30] = ["Kawak", 0, 2500], e[31] = ["Snowman", 0, 400], e[32] = ["Elf", 0, 1e3], e[33] = ["Green Bauble", 0, 300], e[34] = ["Red Bauble", 0, 300], e[35] = ["Golden Bauble", 0, 800], e[36] = ["Duck", 0, 300], e[37] = ["Tornado", 0, 3e3], e[38] = ["Golden Beetle", 0, 1500];
-                    const o = [];
-                    o[0] = ["None", 0, n], o[1] = ["Mustache", 0, 100], o[2] = ["Sun Glasses", 0, 500], o[3] = ["Yellow Cap", 0, n], o[4] = ["Blue Cap", 0, n], o[5] = ["Purple Cap", 0, n], o[6] = ["Green Cap", 0, n], o[7] = ["Pink Bow", 0, n], o[8] = ["3D Glasses", 0, 300], o[9] = ["Scar", 0, 150], o[10] = ["Turban", 0, 250], o[11] = ["Bandage", 0, 250], o[12] = ["Crazy Glasses", 0, 150], o[13] = ["Cow's Snout", 0, 300], o[14] = ["Carrot", 0, 150], o[15] = ["Horn", 0, 1e3], o[16] = ["Tusk", 0, 800], o[17] = ["Mammoth Hair", 0, 600], o[18] = ["Mammoth Ears", 0, 500], o[19] = ["Leaf", 0, 150], o[20] = ["Black Mustache", 0, 500], o[21] = ["Snowman Hat", 0, 1e3], o[22] = ["Blue Beanie", 0, 200], o[23] = ["Green Beanie", 0, 200], o[24] = ["Purple Beanie", 0, 200], o[25] = ["Orange Beanie", 0, 200], o[26] = ["Yellow Scarf", 0, 250], o[27] = ["Red Scarf", 0, 350], o[28] = ["Green Scarf", 0, 300], o[29] = ["Red Nose", 0, 400], o[30] = ["Mask", 0, 1e3], o[31] = ["Garlands", 0, 500];
-                    const c = [];
-                    c[0] = ["None", 0, n], c[1] = ["Mammoth Tail", 0, 500], c[2] = ["Dragon Wings", 0, 5e3], c[3] = ["Swords", 0, 2e3], c[4] = ["Blue Cape", 0, 400], c[5] = ["Christmas Cape", 0, 400], c[6] = ["Speedy Cape", 0, 400], c[7] = ["Garland", 0, 300], c[8] = ["Baby Elf", 0, 1500], c[9] = ["Gift", 0, 1e3], c[10] = ["Yellow Bag", 0, 300], t.exports = {}, t.exports.fh = e, t.exports.fi = o, t.exports.fj = c
+                        skins = [];
+                    skins[0] = ["Sploop Classic", 0, n], skins[1] = ["Yellow Classic", 0, n], skins[2] = ["Brown Classic", 0, n], skins[3] = ["Pink Classic", 0, n], skins[4] = ["Blue Classic", 0, n], skins[5] = ["Green Classic", 0, n], skins[6] = ["White Cat", 0, 100], skins[7] = ["Ginger Cat", 0, 100], skins[8] = ["Pit Bull", 0, 150], skins[9] = ["Pig", 0, 100], skins[10] = ["Crocodile", 0, 200], skins[11] = ["Fox", 0, 200], skins[12] = ["Panda", 0, 300], skins[13] = ["Bear", 0, 300], skins[14] = ["Penguin", 0, 300], skins[15] = ["Cactus", 0, 400], skins[16] = ["Strawberry", 0, 800], skins[17] = ["Wolf", 0, 400], skins[18] = ["Mammoth", 0, 2e3], skins[19] = ["Golden Cow", 0, 3e3], skins[20] = ["Shark", 0, 1e3], skins[21] = ["Apple", 0, 200], skins[22] = ["Stone", 0, 500], skins[23] = ["Cave Stone", 0, 600], skins[24] = ["Ice", 0, 700], skins[25] = ["Gold", 0, 800], skins[26] = ["Cow", 0, 350], skins[27] = ["Dragon", 0, 5e3], skins[28] = ["Black Ice", 0, 1e3], skins[29] = ["Magma", 0, 1500], skins[30] = ["Kawak", 0, 2500], skins[31] = ["Snowman", 0, 400], skins[32] = ["Elf", 0, 1e3], skins[33] = ["Green Bauble", 0, 300], skins[34] = ["Red Bauble", 0, 300], skins[35] = ["Golden Bauble", 0, 800], skins[36] = ["Duck", 0, 300], skins[37] = ["Tornado", 0, 3e3], skins[38] = ["Golden Beetle", 0, 1500];
+                    const accesory = [];
+                    accesory[0] = ["None", 0, n], accesory[1] = ["Mustache", 0, 100], accesory[2] = ["Sun Glasses", 0, 500], accesory[3] = ["Yellow Cap", 0, n], accesory[4] = ["Blue Cap", 0, n], accesory[5] = ["Purple Cap", 0, n], accesory[6] = ["Green Cap", 0, n], accesory[7] = ["Pink Bow", 0, n], accesory[8] = ["3D Glasses", 0, 300], accesory[9] = ["Scar", 0, 150], accesory[10] = ["Turban", 0, 250], accesory[11] = ["Bandage", 0, 250], accesory[12] = ["Crazy Glasses", 0, 150], accesory[13] = ["Cow's Snout", 0, 300], accesory[14] = ["Carrot", 0, 150], accesory[15] = ["Horn", 0, 1e3], accesory[16] = ["Tusk", 0, 800], accesory[17] = ["Mammoth Hair", 0, 600], accesory[18] = ["Mammoth Ears", 0, 500], accesory[19] = ["Leaf", 0, 150], accesory[20] = ["Black Mustache", 0, 500], accesory[21] = ["Snowman Hat", 0, 1e3], accesory[22] = ["Blue Beanie", 0, 200], accesory[23] = ["Green Beanie", 0, 200], accesory[24] = ["Purple Beanie", 0, 200], accesory[25] = ["Orange Beanie", 0, 200], accesory[26] = ["Yellow Scarf", 0, 250], accesory[27] = ["Red Scarf", 0, 350], accesory[28] = ["Green Scarf", 0, 300], accesory[29] = ["Red Nose", 0, 400], accesory[30] = ["Mask", 0, 1e3], accesory[31] = ["Garlands", 0, 500];
+                    const accesory_one = [];
+                    accesory_one[0] = ["None", 0, n], accesory_one[1] = ["Mammoth Tail", 0, 500], accesory_one[2] = ["Dragon Wings", 0, 5e3], accesory_one[3] = ["Swords", 0, 2e3], accesory_one[4] = ["Blue Cape", 0, 400], accesory_one[5] = ["Christmas Cape", 0, 400], accesory_one[6] = ["Speedy Cape", 0, 400], accesory_one[7] = ["Garland", 0, 300], accesory_one[8] = ["Baby Elf", 0, 1500], accesory_one[9] = ["Gift", 0, 1e3], accesory_one[10] = ["Yellow Bag", 0, 300], t.exports = {}, t.exports.fh = skins, t.exports.fi = accesory, t.exports.fj = accesory_one
                 },
                 9738: function (t) {
                     t.exports = function (t, n) {
@@ -1718,8 +1703,8 @@
                         r = e(6466),
                         f = e(7385),
                         a = e(3141),
-                        s = [];
-                    s[c.ab] = {
+                        items = [];
+                    items[c.ab] = {
                         i: c.ab,
                         ft: c.cj,
                         fu: a.V,
@@ -1737,7 +1722,7 @@
                         fB: 0,
                         fC: -3.5,
                         d7: 1
-                    }, s[c.cj] = {
+                    }, items[c.cj] = {
                         i: c.cj,
                         ft: c.cl,
                         fu: a.fD,
@@ -1755,7 +1740,7 @@
                         fB: 0,
                         fC: -3.5,
                         d7: 1
-                    }, s[c.cl] = {
+                    }, items[c.cl] = {
                         i: c.cl,
                         ft: c.cn,
                         fu: a.fE,
@@ -1773,7 +1758,7 @@
                         fB: 0,
                         fC: -3.5,
                         d7: 1
-                    }, s[c.cn] = {
+                    }, items[c.cn] = {
                         i: c.cn,
                         fv: r.co,
                         d5: r.cn,
@@ -1789,7 +1774,7 @@
                         fB: 0,
                         fC: -3.5,
                         d7: 1
-                    }, s[c.aa] = {
+                    }, items[c.aa] = {
                         i: c.aa,
                         fF: f.d3,
                         fG: f.fH,
@@ -1807,7 +1792,7 @@
                         fB: 0,
                         fC: -8,
                         d7: -4
-                    }, s[c.fp] = {
+                    }, items[c.fp] = {
                         i: c.fp,
                         fF: f.d3,
                         fG: f.fJ,
@@ -1824,7 +1809,7 @@
                         fB: 0,
                         fC: 10,
                         d7: 20
-                    }, s[c.fo] = {
+                    }, items[c.fo] = {
                         ft: c.fp,
                         fu: a.fE,
                         i: c.fo,
@@ -1843,7 +1828,7 @@
                         fB: 0,
                         fC: 10,
                         d7: 20
-                    }, s[c.fn] = {
+                    }, items[c.fn] = {
                         ft: c.fo,
                         fu: a.fD,
                         i: c.fn,
@@ -1862,7 +1847,7 @@
                         fB: 0,
                         fC: 10,
                         d7: 20
-                    }, s[c.fm] = {
+                    }, items[c.fm] = {
                         ft: c.fn,
                         fu: a.V,
                         i: c.fm,
@@ -1881,7 +1866,7 @@
                         fB: 0,
                         fC: 10,
                         d7: 20
-                    }, s[c.aR] = {
+                    }, items[c.aR] = {
                         i: c.aR,
                         ft: c.c0,
                         fu: a.V,
@@ -1901,7 +1886,7 @@
                         fB: 0,
                         fC: 1,
                         d7: 3
-                    }, s[c.c0] = {
+                    }, items[c.c0] = {
                         i: c.c0,
                         ft: c.bY,
                         fu: a.fD,
@@ -1921,7 +1906,7 @@
                         fB: 0,
                         fC: 1,
                         d7: 3
-                    }, s[c.bY] = {
+                    }, items[c.bY] = {
                         i: c.bY,
                         ft: c.ca,
                         fu: a.fE,
@@ -1941,7 +1926,7 @@
                         fB: 0,
                         fC: 1,
                         d7: 3
-                    }, s[c.ca] = {
+                    }, items[c.ca] = {
                         i: c.ca,
                         fF: f.fH,
                         fG: f.fH,
@@ -1959,7 +1944,7 @@
                         fB: 0,
                         fC: 1,
                         d7: 3
-                    }, s[c.cZ] = {
+                    }, items[c.cZ] = {
                         i: c.cZ,
                         fF: f.fH,
                         fG: f.fH,
@@ -1977,7 +1962,7 @@
                         fB: 0,
                         fC: -5,
                         d7: 20
-                    }, s[c.aE] = {
+                    }, items[c.aE] = {
                         i: c.aE,
                         ft: c.cb,
                         fu: a.V,
@@ -2000,7 +1985,7 @@
                         fL: 7,
                         fM: 7,
                         fN: 4
-                    }, s[c.cb] = {
+                    }, items[c.cb] = {
                         i: c.cb,
                         ft: c.cd,
                         fu: a.fD,
@@ -2023,7 +2008,7 @@
                         fL: 8,
                         fM: 8,
                         fN: 5
-                    }, s[c.cd] = {
+                    }, items[c.cd] = {
                         i: c.cd,
                         ft: c.ce,
                         fu: a.fE,
@@ -2046,7 +2031,7 @@
                         fL: 9,
                         fM: 9,
                         fN: 6
-                    }, s[c.ce] = {
+                    }, items[c.ce] = {
                         i: c.ce,
                         fF: f.d3,
                         fG: f.aE,
@@ -2067,7 +2052,7 @@
                         fL: 10,
                         fM: 10,
                         fN: 7
-                    }, s[c.ac] = {
+                    }, items[c.ac] = {
                         i: c.ac,
                         ft: c.c4,
                         fu: a.V,
@@ -2087,7 +2072,7 @@
                         fB: 0,
                         fC: 0,
                         d7: 2
-                    }, s[c.c2] = {
+                    }, items[c.c2] = {
                         i: c.c2,
                         fF: f.d3,
                         fG: f.fO,
@@ -2105,7 +2090,7 @@
                         fB: 0,
                         fC: 0,
                         d7: 2
-                    }, s[c.c4] = {
+                    }, items[c.c4] = {
                         i: c.c4,
                         ft: c.c2,
                         fu: a.fD,
@@ -2125,7 +2110,7 @@
                         fB: 0,
                         fC: 0,
                         d7: 2
-                    }, s[c.bn] = {
+                    }, items[c.bn] = {
                         i: c.bn,
                         ft: c.ch,
                         fu: a.V,
@@ -2145,7 +2130,7 @@
                         fB: 0,
                         fC: 0,
                         d7: -4
-                    }, s[c.ch] = {
+                    }, items[c.ch] = {
                         i: c.ch,
                         ft: c.cf,
                         fu: a.fD,
@@ -2165,7 +2150,7 @@
                         fB: 0,
                         fC: 0,
                         d7: -4
-                    }, s[c.cf] = {
+                    }, items[c.cf] = {
                         i: c.cf,
                         fF: f.fO,
                         fG: f.fO,
@@ -2183,7 +2168,7 @@
                         fB: 0,
                         fC: 0,
                         d7: -4
-                    }, s[c.bP] = {
+                    }, items[c.bP] = {
                         i: c.bP,
                         fF: f.d3,
                         fG: f.bP,
@@ -2201,7 +2186,7 @@
                         fB: 0,
                         fC: 10,
                         d7: 2
-                    }, s[c.cY] = {
+                    }, items[c.cY] = {
                         i: c.cY,
                         ft: c.cZ,
                         fu: a.fD,
@@ -2221,7 +2206,7 @@
                         fB: 0,
                         fC: 40,
                         d7: 40
-                    }, s[c.aM] = {
+                    }, items[c.aM] = {
                         i: c.aM,
                         fF: f.d3,
                         fG: f.d3,
@@ -2240,7 +2225,7 @@
                         fB: 0,
                         fC: 5,
                         d7: 2
-                    }, s[c.fk] = {
+                    }, items[c.fk] = {
                         i: c.fk,
                         ft: c.bU,
                         fu: a.V,
@@ -2263,7 +2248,7 @@
                         fL: 2,
                         fM: 2,
                         fN: 2
-                    }, s[c.bU] = {
+                    }, items[c.bU] = {
                         i: c.bU,
                         ft: c.bS,
                         fu: a.fD,
@@ -2286,7 +2271,7 @@
                         fL: 2,
                         fM: 2,
                         fN: 2
-                    }, s[c.bS] = {
+                    }, items[c.bS] = {
                         i: c.bS,
                         fF: f.d3,
                         fG: f.fP,
@@ -2307,7 +2292,7 @@
                         fL: 2,
                         fM: 2,
                         fN: 2
-                    }, s[c.bE] = {
+                    }, items[c.bE] = {
                         i: c.bE,
                         ft: c.c6,
                         fu: a.V,
@@ -2330,7 +2315,7 @@
                         fL: 4,
                         fM: 4,
                         fN: 2
-                    }, s[c.c6] = {
+                    }, items[c.c6] = {
                         i: c.c6,
                         ft: c.bW,
                         fu: a.fD,
@@ -2353,7 +2338,7 @@
                         fL: 4,
                         fM: 4,
                         fN: 2
-                    }, s[c.bW] = {
+                    }, items[c.bW] = {
                         i: c.bW,
                         fF: f.fP,
                         fG: f.fP,
@@ -2374,7 +2359,7 @@
                         fL: 4,
                         fM: 4,
                         fN: 2
-                    }, s[c.ad] = {
+                    }, items[c.ad] = {
                         i: c.ad,
                         d6: [0, 0, 10, 0],
                         fF: f.bb,
@@ -2395,7 +2380,7 @@
                         fI: .63,
                         fC: 0,
                         d7: 0
-                    }, s[c.bb] = {
+                    }, items[c.bb] = {
                         i: c.bb,
                         d6: [0, 4, 0, 0],
                         fF: f.d3,
@@ -2415,7 +2400,7 @@
                         fI: .75,
                         fC: 0,
                         d7: 35
-                    }, s[c.cI] = {
+                    }, items[c.cI] = {
                         i: c.cI,
                         d6: [80, 80, 80, 80],
                         fF: f.d3,
@@ -2435,7 +2420,7 @@
                         fI: .4,
                         fC: 0,
                         d7: 35
-                    }, s[c.bf] = {
+                    }, items[c.bf] = {
                         i: c.bf,
                         d6: [0, 10, 0, 0],
                         fF: f.bb,
@@ -2455,7 +2440,7 @@
                         fI: .35,
                         fC: 0,
                         d7: 30
-                    }, s[c.fl] = {
+                    }, items[c.fl] = {
                         i: c.fl,
                         d6: [0, 10, 0, 0],
                         fv: r.aj,
@@ -2469,7 +2454,7 @@
                         d7: 15,
                         fU: o.W,
                         fB: 2
-                    }, s[c.cJ] = {
+                    }, items[c.cJ] = {
                         i: c.cJ,
                         d6: [0, 50, 50, 0],
                         fF: f.fP | f.aE | f.bP,
@@ -2485,7 +2470,7 @@
                         d7: 15,
                         fU: o.cJ,
                         fB: 2
-                    }, s[c.bq] = {
+                    }, items[c.bq] = {
                         i: c.bq,
                         d6: [0, 0, 35, 10],
                         fF: f.d3,
@@ -2501,7 +2486,7 @@
                         d7: 13,
                         fU: o.bq,
                         fB: 2
-                    }, s[c.e4] = {
+                    }, items[c.e4] = {
                         i: c.e4,
                         d6: [0, 200, 150, 10],
                         fF: f.d3,
@@ -2517,7 +2502,7 @@
                         d7: 25,
                         fU: o.e4,
                         fB: 2
-                    }, s[c.aO] = {
+                    }, items[c.aO] = {
                         i: c.aO,
                         fF: f.d3,
                         fG: f.d3,
@@ -2533,7 +2518,7 @@
                         d7: 25,
                         fU: o.aO,
                         fB: 2
-                    }, s[c.e2] = {
+                    }, items[c.e2] = {
                         i: c.e2,
                         d6: [0, 50, 10, 0],
                         fv: r.aH,
@@ -2547,7 +2532,7 @@
                         d7: 38,
                         fU: o.e2,
                         fB: 2
-                    }, s[c.e3] = {
+                    }, items[c.e3] = {
                         i: c.e3,
                         d6: [0, 100, 50, 0],
                         fF: f.d3,
@@ -2563,7 +2548,7 @@
                         d7: 38,
                         fU: o.e3,
                         fB: 2
-                    }, s[c.X] = {
+                    }, items[c.X] = {
                         i: c.X,
                         d6: [0, 20, 5, 0],
                         fv: r.an,
@@ -2577,7 +2562,7 @@
                         d7: 15,
                         fU: o.X,
                         fB: 2
-                    }, s[c.aW] = {
+                    }, items[c.aW] = {
                         i: c.aW,
                         fF: f.d3,
                         fG: f.d3,
@@ -2593,7 +2578,7 @@
                         d7: 15,
                         fU: o.aW,
                         fB: 2
-                    }, s[c.b3] = {
+                    }, items[c.b3] = {
                         i: c.b3,
                         fF: f.d3,
                         fG: f.d3,
@@ -2609,7 +2594,7 @@
                         d7: 47,
                         fU: o.b3,
                         fB: 2
-                    }, s[c.b5] = {
+                    }, items[c.b5] = {
                         i: c.b5,
                         fF: f.d3,
                         fG: f.d3,
@@ -2625,7 +2610,7 @@
                         d7: 47,
                         fU: o.b5,
                         fB: 2
-                    }, s[c.b6] = {
+                    }, items[c.b6] = {
                         i: c.b6,
                         fF: f.d3,
                         fG: f.d3,
@@ -2641,7 +2626,7 @@
                         d7: 20,
                         fU: o.b6,
                         fB: 2
-                    }, s[c.b8] = {
+                    }, items[c.b8] = {
                         i: c.b8,
                         fF: f.d3,
                         fG: f.d3,
@@ -2657,7 +2642,7 @@
                         d7: 17,
                         fU: o.U,
                         fB: 2
-                    }, s[c.aU] = {
+                    }, items[c.aU] = {
                         i: c.aU,
                         d6: [0, 30, 30, 0],
                         fF: f.fP | f.aE,
@@ -2673,7 +2658,7 @@
                         d7: 14,
                         fU: o.aU,
                         fB: 2
-                    }, s[c.Z] = {
+                    }, items[c.Z] = {
                         i: c.Z,
                         d6: [0, 5, 20, 0],
                         fF: f.d3,
@@ -2689,7 +2674,7 @@
                         d7: 3,
                         fU: o.Z,
                         fB: 2
-                    }, s[c.Y] = {
+                    }, items[c.Y] = {
                         i: c.Y,
                         d6: [0, 30, 30, 0],
                         fF: f.d3,
@@ -2705,7 +2690,7 @@
                         d7: 26,
                         fU: o.Y,
                         fB: 2
-                    }, s[c.a0] = {
+                    }, items[c.a0] = {
                         i: c.a0,
                         d6: [0, 20, 0, 0],
                         fF: f.d3,
@@ -2721,7 +2706,7 @@
                         d7: 8,
                         fU: o.a0,
                         fB: 2
-                    }, s[c.cv] = {
+                    }, items[c.cv] = {
                         i: c.cv,
                         d6: [0, 20, 0, 0],
                         fF: f.d3,
@@ -2737,7 +2722,7 @@
                         d7: 15,
                         fU: o.cv,
                         fB: 2
-                    }, s[c.as] = {
+                    }, items[c.as] = {
                         i: c.as,
                         d6: [10, 0, 0, 0],
                         fv: r.at,
@@ -2750,7 +2735,7 @@
                         fC: 0,
                         d7: 22,
                         fB: 2
-                    }, s[c.aB] = {
+                    }, items[c.aB] = {
                         i: c.aB,
                         d6: [15, 0, 0, 0],
                         fF: f.d3,
@@ -2765,7 +2750,7 @@
                         fC: 0,
                         d7: 22,
                         fB: 2
-                    }, s[c.aw] = {
+                    }, items[c.aw] = {
                         i: c.aw,
                         fF: f.d3,
                         fG: f.aw,
@@ -2785,7 +2770,7 @@
                         fC: -15,
                         d7: 10,
                         fB: 3
-                    }, t.exports = s
+                    }, t.exports = items
                 },
                 2802: function (t) {
                     const n = function () {
@@ -4008,49 +3993,49 @@
                 9413: function (t, n, e) {
                     const o = e(3845),
                         c = e(7380);
-                    let r = [];
-                    r[o.gm] = {
+                    let map_colors = [];
+                    map_colors[o.gm] = {
                         hl: 160,
                         hn: 160,
                         hm: c.dH - 160,
                         ho: 5 * c.dI / 20,
                         iu: "#ece5db"
-                    }, r[o.gk] = {
+                    }, map_colors[o.gk] = {
                         hl: 160,
                         hn: 5 * c.dI / 20,
                         hm: c.dH - 160,
                         ho: 15 * c.dI / 20,
                         iu: "#788F57"
-                    }, r[o.gn] = {
+                    }, map_colors[o.gn] = {
                         hl: 160,
                         hn: 15 * c.dI / 20,
                         hm: c.dH - 160,
                         ho: 16 * c.dI / 20,
                         iu: "#fcefbb"
-                    }, r[o.gl] = {
+                    }, map_colors[o.gl] = {
                         hl: 160,
                         hn: 16 * c.dI / 20,
                         hm: c.dH - 160,
                         ho: c.dI - 1e3,
                         iu: "#2a8b9b"
-                    }, r[o.go] = {
+                    }, map_colors[o.go] = {
                         hl: 160,
                         hn: c.dI - 1e3,
                         hm: c.dH - 160,
                         ho: c.dI - 160,
                         iu: "#b38354"
-                    }, t.exports = r
+                    }, t.exports = map_colors
                 }
             },
             b = {};
 
-        function p(t) {
+        function functions_functions(t) {
             var n = b[t];
             if (void 0 !== n) return n.exports;
             var e = b[t] = {
                 exports: {}
             };
-            return k[t](e, e.exports, p), e.exports
+            return functions[t](e, e.exports, functions_functions), e.exports
         }! function () {
             const i = t(this, (function () {
                 return i.toString().search("(((.+)+)+)+$").toString().constructor(i).search("(((.+)+)+)+$")
@@ -4074,32 +4059,32 @@
                         r = n[c] || o;
                     o.__proto__ = e.bind(e), o.toString = r.toString.bind(r), n[c] = o
                 }
-            }))(), p.n = function (t) {
+            }))(), functions_functions.n = function (t) {
                 var n = t && t.iv ? function () {
                     return t.default
                 } : function () {
                     return t
                 };
-                return p.d(n, {
+                return functions_functions.d(n, {
                     a: n
                 }), n
             }
         }(), ! function () {
-            p.d = function (t, n) {
-                for (var e in n) p.iw(n, e) && !p.iw(t, e) && Object.defineProperty(t, e, {
+            functions_functions.d = function (t, n) {
+                for (var e in n) functions_functions.iw(n, e) && !functions_functions.iw(t, e) && Object.defineProperty(t, e, {
                     ix: !![],
                     get: n[e]
                 })
             }
         }(), ! function () {
-            p.iw = function (t, n) {
+            functions_functions.iw = function (t, n) {
                 return Object.prototype.hasOwnProperty.call(t, n)
             }
         }();
         var j = {};
         ! function () {
             "use strict";
-            p.d(j, {
+            functions_functions.d(j, {
                 iy: function () {
                     return po
                 },
@@ -4182,7 +4167,7 @@
                     return Fc
                 },
                 iZ: function () {
-                    return ji
+                    return server_select
                 },
                 j0: function () {
                     return ao
@@ -4218,18 +4203,18 @@
                     return ve
                 }
             });
-            var t = p(7380),
-                n = p.n(t),
-                e = p(2042),
-                o = p.n(e),
-                c = p(3120),
-                k = p.n(c),
-                b = p(5522),
-                m = p.n(b),
-                w = p(3428),
-                T = p.n(w),
-                _ = p(183),
-                v = p.n(_);
+            var t = functions_functions(7380),
+                n = functions_functions.n(t),
+                e = functions_functions(2042),
+                o = functions_functions.n(e),
+                c = functions_functions(3120),
+                k = functions_functions.n(c),
+                b = functions_functions(5522),
+                m = functions_functions.n(b),
+                w = functions_functions(3428),
+                T = functions_functions.n(w),
+                _ = functions_functions(183),
+                v = functions_functions.n(_);
             let U = new Map,
                 A = [],
                 E = [];
@@ -4826,7 +4811,7 @@
                 H = D[20],
                 L = D[24];
 
-            function q() {
+            function player_func() {
                 this.players = [], this.add_player = function (t, n, e) {
                     this.players[t] = {
                         i: t,
@@ -4874,9 +4859,9 @@
                     }
                 }
                 return a
-            }, O.jM = function (t, n, e) {
-                let o = n.getContext("2d");
-                o.clearRect(0, 0, n.width, n.height), o.drawImage(t, 0, 0, n.width, n.height), e && (o.save(), o.globalCompositeOperation = "source-atop", o.fillStyle = e, o.fillRect(0, 0, n.width, n.height), o.restore())
+            }, O.jM = function (t, canvas, e) {
+                let ctx = canvas.getContext("2d");
+                ctx.clearRect(0, 0, canvas.width, canvas.height), ctx.drawImage(t, 0, 0, canvas.width, canvas.height), e && (ctx.save(), ctx.globalCompositeOperation = "source-atop", ctx.fillStyle = e, ctx.fillRect(0, 0, canvas.width, canvas.height), ctx.restore())
             };
             let K = 1923912;
             O.jN = function (t) {
@@ -4897,10 +4882,10 @@
                 return T().id(t)
             };
             var z = O,
-                Z = p(6466),
-                Y = p.n(Z),
-                X = p(9968),
-                J = p.n(X);
+                Z = functions_functions(6466),
+                Y = functions_functions.n(Z),
+                X = functions_functions(9968),
+                J = functions_functions.n(X);
             const $ = [];
 
             function tt(t, n, e, i, o, c, r, f, a, s, l, d) {
@@ -4929,14 +4914,14 @@
                 [z.jU(z.jQ("dragon_2_head")), new tt(50, 0, 0, -3, 3, 1e3, 0, 0, 0, -Math.PI / 40, Math.PI / 40, 1400)]
             ], $[Y().b0] = z.jU(z.jQ("turret_base")), $[Y().aZ] = z.jU(z.jQ("turret_top")), $[Y().aY] = z.jU(z.jQ("turret_assembled")), $[Y().aW] = z.jU(z.jQ("hard_spike")), $[Y().bb] = z.jU(z.jQ("bow")), $[Y().bc] = z.jU(z.jQ("arrow")), $[Y().b5] = z.jU(z.jQ("wood_farm")), $[Y().b3] = z.jU(z.jQ("wood_farm_cherry")), $[Y().b6] = z.jU(z.jQ("stone_farm")), $[Y().b8] = z.jU(z.jQ("bush")), $[Y().cC] = z.jU(z.jO("currency")), $[Y().ar] = z.jU(z.jQ("hat_1")), $[Y().au] = z.jU(z.jQ("hat_2")), $[Y().av] = z.jU(z.jQ("hat_3")), $[Y().ay] = z.jU(z.jQ("hat_4")), $[Y().az] = z.jU(z.jQ("hat_5")), $[Y().aA] = z.jU(z.jQ("hat_6")), $[Y().cM] = z.jU(z.jQ("cactus")), $[Y().cN] = z.jU(z.jQ("tornado")), $[Y().bh] = z.jU(z.jQ("hat_7")), $[Y().bJ] = z.jU(z.jQ("hat_8")), $[Y().bO] = z.jU(z.jQ("hat_9")), $[Y().cL] = z.jU(z.jQ("hat_10")), $[Y().cX] = z.jU(z.jQ("hat_11")), $[Y().as] = z.jU(z.jQ("apple")), $[Y().aE] = z.jU(z.jQ("stick")), $[Y().aU] = z.jU(z.jQ("big_spike")), $[Y().bd] = z.jU(z.jQ("map_cross")), $[Y().aR] = z.jU(z.jQ("katana")), $[Y().bf] = z.jU(z.jQ("Xbow")), $[Y().bm] = z.jU(z.jQ("map_dot")), $[Y().d2] = z.jU(z.jQ("our_dot")), $[Y().aO] = z.jU(z.jQ("bed")), $[Y().bq] = z.jU(z.jQ("castle_wall")), $[Y().bn] = z.jU(z.jQ("cut_spear")), $[Y().bg] = z.jU(z.jQ("team_crown")), $[Y().c8] = null, $[Y().aV] = z.jU(z.jQ("skid_hat")), $[Y().aM] = z.jU(z.jQ("hammer")), $[Y().aD] = null, $[Y().aq] = z.jU(z.jQ("toggle-button-out1")), $[Y().bk] = z.jU(z.jQ("clan_button_out")), $[Y().bi] = z.jU(z.jQ("hat_button_out")), $[Y().bj] = z.jU(z.jQ("close_button_out")), $[Y().bl] = z.jU(z.jQ("chat_button_out")), $[Y().bo] = z.jU(z.jQ("inv_cut_spear")), $[Y().af] = z.jU(z.jQ("inv_stone_toolhammer")), $[Y().ae] = z.jU(z.jQ("inv_stone_sword")), $[Y().cP] = z.jU(z.jR("s_dagger")), $[Y().cT] = z.jU(z.jR("s_dagger")), $[Y().cQ] = z.jU(z.jR("g_dagger")), $[Y().cU] = z.jU(z.jR("g_dagger")), $[Y().cR] = z.jU(z.jR("d_dagger")), $[Y().cV] = z.jU(z.jR("d_dagger")), $[Y().cS] = z.jU(z.jR("r_dagger")), $[Y().cW] = z.jU(z.jR("r_dagger")), $[Y().ah] = z.jU(z.jQ("inv_stone_spear")), $[Y().ai] = z.jU(z.jQ("inv_stone_axe")), $[Y().bF] = z.jU(z.jQ("inv_great_axe")), $[Y().aC] = z.jU(z.jQ("inv_cookie")), $[Y().ag] = z.jU(z.jQ("inv_musket")), $[Y().aj] = z.jU(z.jQ("inv_wood_wall")), $[Y().bp] = z.jU(z.jQ("inv_castle_wall")), $[Y().an] = z.jU(z.jQ("inv_spike")), $[Y().am] = z.jU(z.jQ("inv_boost")), $[Y().ao] = z.jU(z.jQ("inv_platform")), $[Y().ap] = z.jU(z.jQ("inv_trap")), $[Y().at] = z.jU(z.jQ("inv_apple")), $[Y().ax] = z.jU(z.jQ("inv_stone_shield")), $[Y().bQ] = z.jU(z.jQ("inv_bat")), $[Y().aH] = z.jU(z.jQ("inv_windmill")), $[Y().aG] = z.jU(z.jQ("windmill_top")), $[Y().aK] = z.jU(z.jQ("windmill_base")), $[Y().aL] = z.jU(z.jQ("windmill_assembled")), $[Y().aF] = z.jU(z.jQ("inv_stick")), $[Y().aN] = z.jU(z.jQ("inv_hammer")), $[Y().aP] = z.jU(z.jQ("inv_bed")), $[Y().aS] = z.jU(z.jQ("inv_katana")), $[Y().aT] = z.jU(z.jQ("inv_big_spike")), $[Y().aX] = z.jU(z.jQ("inv_hard_spike")), $[Y().b1] = z.jU(z.jQ("inv_turret")), $[Y().b4] = z.jU(z.jQ("inv_wood_farm")), $[Y().b2] = z.jU(z.jQ("inv_wood_farm_cherry")), $[Y().b7] = z.jU(z.jQ("inv_stone_farm")), $[Y().b9] = z.jU(z.jQ("inv_bush")), $[Y().ba] = z.jU(z.jQ("inv_bow")), $[Y().be] = z.jU(z.jQ("inv_xbow")), $[Y().br] = z.jU(z.jR("wall")), $[Y().bs] = z.jU(z.jR("spike")), $[Y().bt] = z.jU(z.jR("castle_wall")), $[Y().bu] = z.jU(z.jR("boost")), $[Y().bv] = z.jU(z.jR("trap")), $[Y().bw] = z.jU(z.jR("stone_farm")), $[Y().bx] = z.jU(z.jR("berry_farm")), $[Y().by] = z.jU(z.jR("wood_farm_cherry")), $[Y().bz] = z.jU(z.jR("wood_farm")), $[Y().bA] = z.jU(z.jR("hard_spike")), $[Y().bB] = z.jU(z.jR("castle_spike")), $[Y().bC] = z.jU(z.jR("platform")), $[Y().bD] = z.jU(z.jR("bed")), $[Y().cv] = z.jU(z.jQ("roof")), $[Y().cw] = z.jU(z.jQ("roof")), $[Y().cr] = z.jU(z.jQ("clan_accept")), $[Y().cs] = z.jU(z.jQ("clan_decline"));
             var et = $,
-                it = p(9428),
-                ot = p.n(it),
-                ct = p(1759),
-                rt = p.n(ct),
-                ft = p(3152),
-                at = p.n(ft),
-                st = p(3845),
-                lt = p.n(st);
+                it = functions_functions(9428),
+                ot = functions_functions.n(it),
+                ct = functions_functions(1759),
+                rt = functions_functions.n(ct),
+                ft = functions_functions(3152),
+                at = functions_functions.n(ft),
+                st = functions_functions(3845),
+                lt = functions_functions.n(st);
 
             function dt(t, n) {
                 let e, c = Date.now(),
@@ -5039,7 +5024,7 @@
                 for (let i = 0; i < r; i++) e[i].dZ & m().ip && bt(e[i], e[i].jn, Y().a1, t, n)
             }
 
-            function ut(t, n, e) {
+            function enemy_clan_style(t, n, e) {
                 const o = et[Y().a8],
                     c = et[Y().a9],
                     r = at()[t.type].g9 + 50,
@@ -5436,8 +5421,8 @@
                         }
                     }
                 },
-                fn = p(6264),
-                an = p.n(fn),
+                fn = functions_functions(6264),
+                an = functions_functions.n(fn),
                 sn = {
                     kL: [],
                     kK: [],
@@ -5538,7 +5523,7 @@
                         if (this.fd -= t * this.fS, this.fd < 0) this.fd = 0
                     }
                 };
-            p(9308);
+            functions_functions(9308);
             const un = function () {
                     this.n = function (t, n, e, o, c, r) {
                         this.gU = t, this.gV = n, this.li = r, this.fS = e, this.fd = 400, this.lj = Math.random() > .5 ? 1 : -1, this.l7 = this.l7 ? T().hV(this.l7, c, 45, this.li) : T().hW(c, 35, this.li), this.scale = 1, this.lk = this.scale, this.ll = 2.5, this.lm = .02, this.fS = .18
@@ -5604,12 +5589,12 @@
                         } e || (e = new gn, this.lo.push(e)), e.n(t, n)
                 }
             }
-            var kn = p(9414),
-                bn = p.n(kn),
-                pn = p(5464),
-                jn = p.n(pn),
-                mn = p(3071),
-                wn = p.n(mn);
+            var kn = functions_functions(9414),
+                bn = functions_functions.n(kn),
+                pn = functions_functions(5464),
+                jn = functions_functions.n(pn),
+                mn = functions_functions(3071),
+                wn = functions_functions.n(mn);
 
             function Tn() {
                 this.n = function () {
@@ -5685,12 +5670,12 @@
                     this.lM[t].jm = n, this.lM[t].d8 = e, this.lM[t].active = !![], this.lM[t].jB = null
                 }
             }
-            p(9757);
+            functions_functions(9757);
             const An = 0,
                 En = 1,
                 Qn = 2,
                 yn = 3,
-                Mn = {
+                servers = {
                     [String("SFRA")]: ["EU#1 Frankfurt", En],
                     [String("SFRA2")]: ["EU#2 Frankfurt", En],
                     [String("SFRA2BIS")]: ["EU#2 Frankfurt", En],
@@ -5739,7 +5724,7 @@
                     for (let n = 0; n < e.length; n++) {
                         const i = e[n],
                             o = i.r,
-                            c = Mn[o];
+                            c = servers[o];
                         if (c[1] !== t) continue;
                         const r = i.d,
                             f = r[0],
@@ -5764,9 +5749,9 @@
                 }
 
                 function k() {
-                    const t = Math.floor(Math.random() * ji.options.length);
-                    ji.selectedIndex = t;
-                    const e = ji.options[t].getAttribute("region");
+                    const t = Math.floor(Math.random() * server_select.options.length);
+                    server_select.selectedIndex = t;
+                    const e = server_select.options[t].getAttribute("region");
                     n.lU(e)
                 }
 
@@ -5787,11 +5772,11 @@
                         o = n.lT;
                     for (let n = 0; n < o.length; n++) {
                         const i = o[n].r,
-                            c = Mn[i][1];
+                            c = servers[i][1];
                         if (i === t.region) {
                             if (c === En) h();
                             else if (c === An) u();
-                            return ji.selectedIndex = e[c], void 0
+                            return server_select.selectedIndex = e[c], void 0
                         }
                         e[c] += 1
                     }
@@ -5829,13 +5814,13 @@
                     J().gI(), this.lZ(), t.sort((t, n) => t.ping - n.ping);
                     let n = t[0];
                     if (n) {
-                        const t = Mn[n.region];
+                        const t = servers[n.region];
                         ro(!![], n.region + ".sploop.io", "80", T().ib() || (T().ic("0"), 0), t ? t[0] : "???"), m(n)
                     } else alert("Matchmaking: UNABLE TO FIND GAME")
                 }, this.lX = function () {
                     let t = [];
                     for (let n = 0, e = this.lT; n < e.length; n++) {
-                        if (Mn[e[n].r][1] === Qn) continue;
+                        if (servers[e[n].r][1] === Qn) continue;
                         t.push(new xn(e[n].r, n))
                     }
                     setTimeout(() => {
@@ -5860,27 +5845,27 @@
                     }
                 }
             }
-            var Sn = p(9413),
-                In = p.n(Sn),
-                Fn = p(7039),
-                Cn = p.n(Fn),
-                Rn = p(9534),
-                Gn = p.n(Rn),
-                Dn = p(3559),
-                Vn = p.n(Dn),
-                Pn = p(3408),
-                Nn = p.n(Pn),
-                Wn = p(2057),
-                Hn = p.n(Wn),
-                Ln = p(5945),
-                qn = p.n(Ln),
-                On = p(5172),
-                Kn = p.n(On),
-                zn = p(4738),
-                Zn = p.n(zn);
+            var Sn = functions_functions(9413),
+                In = functions_functions.n(Sn),
+                Fn = functions_functions(7039),
+                Cn = functions_functions.n(Fn),
+                Rn = functions_functions(9534),
+                Gn = functions_functions.n(Rn),
+                Dn = functions_functions(3559),
+                Vn = functions_functions.n(Dn),
+                Pn = functions_functions(3408),
+                Nn = functions_functions.n(Pn),
+                Wn = functions_functions(2057),
+                Hn = functions_functions.n(Wn),
+                Ln = functions_functions(5945),
+                qn = functions_functions.n(Ln),
+                On = functions_functions(5172),
+                Kn = functions_functions.n(On),
+                zn = functions_functions(4738),
+                Zn = functions_functions.n(zn);
             atob("Y29udGVudFdpbmRvdw=="), atob("aWZyYW1l"), [].pop.constructor("return this")(), atob("ZG9jdW1lbnQ="), atob("Y3JlYXRlRWxlbWVudA=="), atob("Ym9keQ=="), atob("YXBwZW5kQ2hpbGQ="), atob("ZGlzcGxheQ=="), atob("c3R5bGU="), atob("bm9uZQ=="), atob("V2ViU29ja2V0");
-            var Yn = p(9498),
-                Xn = p.n(Yn);
+            var Yn = functions_functions(9498),
+                Xn = functions_functions.n(Yn);
 
             function Jn() {}
             const $n = [o().e2, o().e3];
@@ -5944,9 +5929,9 @@
                     e = be(t);
                 return Math.sqrt(t.map(t => Math.pow(t - e, 2)).reduce((t, n) => t + n) / n)
             }
-            const je = new TextEncoder;
-            let me = document.getElementById("game-canvas"),
-                we = me.getContext("2d"),
+            const text_encoder = new TextEncoder;
+            let canvas = document.getElementById("game-canvas"),
+                ctx = canvas.getContext("2d"),
                 Te = ![],
                 _e = fe,
                 ve = 0,
@@ -5960,7 +5945,7 @@
                 },
                 Qe = new hn,
                 ye = new G,
-                Me = new q,
+                new_player = new player_func,
                 xe = new Un,
                 Be = sn,
                 Se = dn,
@@ -6040,23 +6025,23 @@
                 },
                 bi = -1,
                 pi = {},
-                ji = null,
-                mi = null,
-                wi = null,
-                Ti = null,
-                _i = null,
-                vi = null,
-                Ui = null,
-                Ai = null,
-                Ei = null,
-                Qi = null,
-                yi = null,
-                Mi = null,
-                xi = null,
-                Bi = null,
-                Si = null,
-                Ii = null,
-                Fi = null,
+                server_select = null,
+                clan_title = null,
+                clan_menu_close_button = null,
+                leave_Clan = null,
+                create_clan = null,
+                leave_clan_button = null,
+                game_over = null,
+                hat_menu_content = null,
+                clan_menu_content = null,
+                create_clan_button = null,
+                clan_menu_clan_name_input = null,
+                chat_wrapper = null,
+                clan_menu = null,
+                chat = null,
+                hat_menu = null,
+                play = null,
+                nickname = null,
                 Ci = null,
                 Ri = 0,
                 Gi = 0,
@@ -6076,28 +6061,28 @@
 
             function qi(t) {
                 if (t && (ei || ii)) return;
-                if (Mi.style.display = t ? "block" : "none", ei = t, Bi.blur(), t) Bi.focus()
+                if (chat_wrapper.style.display = t ? "block" : "none", ei = t, chat.blur(), t) chat.focus()
             }
 
             function Oi(t) {
                 if (oi = t, t && (ei && qi(![]), ii && To(![])), t && !qe) uc();
-                xi.style.display = t ? "block" : "none"
+                clan_menu.style.display = t ? "block" : "none"
             }
 
             function Ki() {
-                ji = document.getElementById("server-select"), mi = document.getElementById("clan-title"), wi = document.getElementById("clan-menu-close-button"), Ti = document.getElementById("leave_clan"), _i = document.getElementById("create_clan"), vi = document.getElementById("leave-clan-button"), Ui = document.getElementById("game_over_popup"), Ai = document.getElementById("hat_menu_content"), Ei = document.getElementById("clan_menu_content"), Qi = document.getElementById("create-clan-button"), yi = document.getElementById("clan-menu-clan-name-input"), Mi = document.getElementById("chat-wrapper"), xi = document.getElementById("clan-menu"), Bi = document.getElementById("chat"), Si = document.getElementById("hat-menu"), Ii = document.getElementById("play"), Fi = document.getElementById("nickname"), window.onbeforeunload = function () {
+                server_select = document.getElementById("server-select"), clan_title = document.getElementById("clan-title"), clan_menu_close_button = document.getElementById("clan-menu-close-button"), leave_Clan = document.getElementById("leave_clan"), create_clan = document.getElementById("create_clan"), leave_clan_button = document.getElementById("leave-clan-button"), game_over = document.getElementById("game_over_popup"), hat_menu_content = document.getElementById("hat_menu_content"), clan_menu_content = document.getElementById("clan_menu_content"), create_clan_button = document.getElementById("create-clan-button"), clan_menu_clan_name_input = document.getElementById("clan-menu-clan-name-input"), chat_wrapper = document.getElementById("chat-wrapper"), clan_menu = document.getElementById("clan-menu"), chat = document.getElementById("chat"), hat_menu = document.getElementById("hat-menu"), play = document.getElementById("play"), nickname = document.getElementById("nickname"), window.onbeforeunload = function () {
                     return "Are you sure you want to leave the tab?"
                 }
             }
 
             function zi() {
-                me.oncontextmenu = () => ![], me.onmousedown = t => Yi(t), me.onmouseup = t => Ji(t), window.addEventListener("mousemove", t => Xi(t), ![]), window.onkeydown = t => oo(t), window.onkeyup = t => co(t), window.addEventListener("resize", t => so(t), ![]), me.addEventListener("touchstart", t => Ot(t), ![]), me.addEventListener("touchmove", t => Kt(t), ![]), me.addEventListener("touchend", t => zt(t), ![]), me.addEventListener("touchcancel", t => zt(t), ![]), me.addEventListener("touchleave", t => zt(t), ![]), Ii.addEventListener("click", t => Oo(t)), wi.addEventListener("mousedown", t => {
+                canvas.oncontextmenu = () => ![], canvas.onmousedown = t => Yi(t), canvas.onmouseup = t => Ji(t), window.addEventListener("mousemove", t => Xi(t), ![]), window.onkeydown = t => oo(t), window.onkeyup = t => co(t), window.addEventListener("resize", t => so(t), ![]), canvas.addEventListener("touchstart", t => Ot(t), ![]), canvas.addEventListener("touchmove", t => Kt(t), ![]), canvas.addEventListener("touchend", t => zt(t), ![]), canvas.addEventListener("touchcancel", t => zt(t), ![]), canvas.addEventListener("touchleave", t => zt(t), ![]), play.addEventListener("click", t => Oo(t)), clan_menu_close_button.addEventListener("mousedown", t => {
                     Oi(!oi)
-                }), vi.addEventListener("mousedown", t => {
+                }), leave_clan_button.addEventListener("mousedown", t => {
                     Kc()
-                }), ji.addEventListener("change", t => {
-                    let n = ji.selectedIndex;
-                    const e = ji.options[n].getAttribute("region");
+                }), server_select.addEventListener("change", t => {
+                    let n = server_select.selectedIndex;
+                    const e = server_select.options[n].getAttribute("region");
                     Ce.lU(e)
                 }), document.getElementById("hat-menu-close-button").addEventListener("mousedown", t => {
                     To(![])
@@ -6111,15 +6096,15 @@
                     si = t.currentTarget.checked
                 }), document.getElementById("particle-toggle").addEventListener("change", t => {
                     di = t.currentTarget.checked
-                }), Qi.addEventListener("click", t => {
-                    Hc(yi.value)
-                }), Bi.addEventListener("blur", () => {
-                    Bi.value = "", qi(![])
-                }), Bi.addEventListener("keypress", t => {
+                }), create_clan_button.addEventListener("click", t => {
+                    Hc(clan_menu_clan_name_input.value)
+                }), chat.addEventListener("blur", () => {
+                    chat.value = "", qi(![])
+                }), chat.addEventListener("keypress", t => {
                     if (!ei) return;
                     if ("Enter" === t.key) {
                         t.preventDefault();
-                        let n = Bi.value.trim();
+                        let n = chat.value.trim();
                         if (qi(![]), 0 === n.length) return;
                         switch (n.split(" ")[0]) {
                         case "texture_reload":
@@ -6130,7 +6115,7 @@
                             });
                             break;
                         case "id":
-                            Me.players.forEach(t => console.log("name: " + t.d8, t.i));
+                            new_player.players.forEach(t => console.log("name: " + t.d8, t.i));
                             break
                         }
                         Qc(n)
@@ -6142,13 +6127,10 @@
                 He = t * Ve / Ae, Le = n * Ve / Ae
             }
 
-            function Yi(t) {
-                if (!t.isTrusted) return;
-                if (!t.target) return;
-                if (!t.type) return;
-                const n = Date.now(),
-                    e = (n - Xe) / 1e3;
-                if (Xe = n, Ye.push(e), Ye.length >= 32) {
+            function Yi(event) {
+                const dateNow = Date.now(),
+                    e = (dateNow - Xe) / 1e3;
+                if (Xe = dateNow, Ye.push(e), Ye.length >= 32) {
                     const t = 1 / be(Ye),
                         n = pe(Ye);
                     let e = ![];
@@ -6160,7 +6142,7 @@
                     Ye.length = 0
                 }
                 if (Je && e > Je) return;
-                nn(![]), Ne = t.clientX, We = t.clientY, Zi(Ne, We), !$i(He, Le) && xc(Li())
+                nn(![]), Ne = event.clientX, We = event.clientY, Zi(Ne, We), !$i(He, Le) && xc(Li())
             }
 
             function Xi(t) {
@@ -6253,8 +6235,8 @@
             }
 
             function so() {
-                if (Ve = ui ? window.devicePixelRatio : 1, me.width = window.innerWidth * Ve, me.height = window.innerHeight * Ve, me.style.width = window.innerWidth + "px", me.style.height = window.innerHeight + "px", Di = me.width, Vi = me.height, Hi(), window.innerHeight / 1080 < window.innerWidth / 1920);
-                Ri = me.width / Ae, Gi = me.height / Ae, we.setTransform(Ae, 0, 0, Ae, 0, 0), _o()
+                if (Ve = ui ? window.devicePixelRatio : 1, canvas.width = window.innerWidth * Ve, canvas.height = window.innerHeight * Ve, canvas.style.width = window.innerWidth + "px", canvas.style.height = window.innerHeight + "px", Di = canvas.width, Vi = canvas.height, Hi(), window.innerHeight / 1080 < window.innerWidth / 1920);
+                Ri = canvas.width / Ae, Gi = canvas.height / Ae, ctx.setTransform(Ae, 0, 0, Ae, 0, 0), _o()
             }
 
             function lo(t = !![]) {
@@ -6273,12 +6255,12 @@
 
             function go() {
                 if (gi++ % 128 == 0) Jn();
-                we.clearRect(0, 0, Ri, Gi);
+                ctx.clearRect(0, 0, Ri, Gi);
                 const t = +new Date,
                     n = (t - ni) / 1e3;
                 ni = t;
                 const e = U.get(ze);
-                e && ye.gE(e.gU, e.gV, n), Pe && (B(n, t), !!Oe && vo(n)), we.save(), Io(we, n), we.restore(), Te ? (we.save(), Qo(we, n), we.restore()) : Hn().h9(), window.requestAnimationFrame(go)
+                e && ye.gE(e.gU, e.gV, n), Pe && (B(n, t), !!Oe && vo(n)), ctx.save(), Io(ctx, n), ctx.restore(), Te ? (ctx.save(), Qo(ctx, n), ctx.restore()) : Hn().h9(), window.requestAnimationFrame(go)
             }
 
             function ho() {
@@ -6292,13 +6274,13 @@
             function bo(t, n, e, o) {
                 const c = T().hZ({
                     i1: "menu-item subcontent-bg",
-                    parent: Ei
+                    parent: clan_menu_content
                 });
                 T().hZ({
                     parent: c,
                     i1: "header",
                     tag: "p",
-                    i0: n ? Me.players[t].d8 : xe.lM[t].d8
+                    i0: n ? new_player.players[t].d8 : xe.lM[t].d8
                 });
                 if (n && e && t !== Ke || !n) {
                     const e = T().hZ({
@@ -6324,7 +6306,7 @@
             function po(t, n, e, i) {
                 const o = t + " - " + e;
                 T().hZ({
-                    parent: ji,
+                    parent: server_select,
                     tag: "option",
                     text: o
                 }).setAttribute("region", i)
@@ -6337,7 +6319,7 @@
                     r = 1 === n ? "EQUIP" : 2 === n ? "UNEQUIP" : "BUY",
                     f = T().hZ({
                         i1: "menu-item",
-                        parent: Ai
+                        parent: hat_menu_content
                     });
                 T().hZ({
                     tag: "img",
@@ -6382,7 +6364,7 @@
             }
 
             function mo(t) {
-                Si.style.display = t ? "flex" : "none", t && (oi && Oi(![]), ei && qi(![])), ii = t
+                hat_menu.style.display = t ? "flex" : "none", t && (oi && Oi(![]), ei && qi(![])), ii = t
             }
             Ki(), zi(), ho(), uo();
             let wo = ![];
@@ -6453,9 +6435,9 @@
                 t.drawImage(r, Ri - r.width - 5, Gi - n.i4.i8 + 186)
             }
 
-            function Ao(t, e, o) {
+            function draw_player(t, e, o) {
                 for (let t, n = 0, o = xe.lN; n < o.length; n++) t = o[n], t.kt(e);
-                let player = Me.players[t],
+                let player = new_player.players[t],
                     c = xe.lN[0];
                 e.drawImage(player.jB = T().hW(player.d8, n().dL, n().dK, "#404040"), c.gU, c.gV - player.jB.height)
             }
@@ -6491,7 +6473,7 @@
                     }
                 }
                 if (Ie.la) {
-                    Ie.kt(t, Me);
+                    Ie.kt(t, new_player);
                     const n = et[Y().N];
                     t.drawImage(n, Ri - n.width - 5, 350);
                     const e = Be.kV,
@@ -6509,7 +6491,7 @@
                         c = o.width * n || 1,
                         r = o.height * n || 1;
                     t.save(), t.globalAlpha = Se.fd, t.drawImage(Se.l7, .5 * Ri - c / 2, 50 - r / 2, c, r), t.restore()
-                } - 1 !== St.i && yo(t, St.kn, St.ko, St.kp, St.kq), -1 !== It.i && yo(t, It.kn, It.ko, It.kp, It.kq), xe.lL[0] && Ao(xe.lL[0], t, e), ai && Ci && t.drawImage(Ci, 0, 0)
+                } - 1 !== St.i && yo(t, St.kn, St.ko, St.kp, St.kq), -1 !== It.i && yo(t, It.kn, It.ko, It.kp, It.kq), xe.lL[0] && draw_player(xe.lL[0], t, e), ai && Ci && t.drawImage(Ci, 0, 0)
             }
 
             function yo(t, n, e, o, c) {
@@ -6530,7 +6512,7 @@
                 let c = et[Y().bg];
                 for (let e = 0, r = A[o().e1], f = r.length; e < f; e++) {
                     const player = r[e],
-                        o = Me.players[player.jm],
+                        o = new_player.players[player.jm],
                         f = rt()[player.jc];
                     if (player.dZ & m().ij) continue;
                     if (!f.d9 || player.jm === Ke) {
@@ -6545,7 +6527,7 @@
                             const e = et[Y().cq][player.jp - 1];
                             l += e.i4.i7, T().ie(t, e, player.gU - s / 2 + (r ? r.width : 0) + a.width, player.gV - n().dM - e.i4.i8 / 2 - 6, e.i4.i7, e.i4.i8)
                         }
-                        f && T().ie(t, c, player.gU - s / 2 + (r ? r.width : 0) + l + a.width + 4, player.gV - n().dM - c.i4.i8 - 6), ut(player, t, qe && qe === player.jd || Ke && Ke === player.jm)
+                        f && T().ie(t, c, player.gU - s / 2 + (r ? r.width : 0) + l + a.width + 4, player.gV - n().dM - c.i4.i8 - 6), enemy_clan_style(player, t, qe && qe === player.jd || Ke && Ke === player.jm)
                     }
                 }
                 if (li)
@@ -6562,12 +6544,12 @@
                 for (let e, c = 0, r = A[o().aI], f = r.length; c < f; c++) {
                     e = r[c], !vn[o().aI] && (vn[o().aI] = T().hW("Cow", n().dL, n().dK, "#404040"));
                     const f = vn[o().aI];
-                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), ut(e, t, ![])
+                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), enemy_clan_style(e, t, ![])
                 }
                 for (let e, c = 0, r = A[o().cH], f = r.length; c < f; c++) {
                     e = r[c], !vn[o().cH] && (vn[o().cH] = T().hW("Duck", n().dL, n().dK, "#404040"));
                     const f = vn[o().cH];
-                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), ut(e, t, ![])
+                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), enemy_clan_style(e, t, ![])
                 }
                 let r = null,
                     f = 0,
@@ -6578,17 +6560,17 @@
                         t < n().dO && (!r || t < f) && (r = e, f = t)
                     }!vn[o().bR] && (vn[o().bR] = T().hW("Golden Cow", n().dL, n().dK, "#404040"));
                     const l = vn[o().bR];
-                    t.drawImage(l, e.gU - l.width / 2, e.gV - n().dM - l.height / 2), ut(e, t, ![])
+                    t.drawImage(l, e.gU - l.width / 2, e.gV - n().dM - l.height / 2), enemy_clan_style(e, t, ![])
                 }
                 for (let e, c = 0, r = A[o().bM], f = r.length; c < f; c++) {
                     e = r[c], !vn[o().bM] && (vn[o().bM] = T().hW("Shark", n().dL, n().dK, "#404040"));
                     const f = vn[o().bM];
-                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), ut(e, t, ![])
+                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), enemy_clan_style(e, t, ![])
                 }
                 for (let e, c = 0, r = A[o().bN], f = r.length; c < f; c++) {
                     e = r[c], !vn[o().bN] && (vn[o().bN] = T().hW("Wolf", n().dL, n().dK, "#404040"));
                     const f = vn[o().bN];
-                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), ut(e, t, ![])
+                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), enemy_clan_style(e, t, ![])
                 }
                 if (r) {
                     Ze = r.i, !et[Y().c8] && (et[Y().c8] = T().hW("[Interact]", 24, "#fff", "#404040"));
@@ -6598,12 +6580,12 @@
                 for (let e, c = 0, r = A[o().cD], f = r.length; c < f; c++) {
                     e = r[c], !vn[o().cD] && (vn[o().cD] = T().hW("Mammoth", n().dL, n().dK, "#404040"));
                     const f = vn[o().cD];
-                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), ut(e, t, ![])
+                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), enemy_clan_style(e, t, ![])
                 }
                 for (let e, c = 0, r = A[o().cE], f = r.length; c < f; c++) {
                     e = r[c], !vn[o().cE] && (vn[o().cE] = T().hW("Dragon", n().dL, n().dK, "#404040"));
                     const f = vn[o().cE];
-                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), ut(e, t, ![])
+                    t.drawImage(f, e.gU - f.width / 2, e.gV - n().dM - f.height / 2), enemy_clan_style(e, t, ![])
                 }
             }
 
@@ -6814,15 +6796,15 @@
             function Po() {
                 let t = Fo[1] | Fo[2] << 8;
                 const n = se.decode(new Uint8Array(Fo.buffer, 3, Co - 3));
-                Qe.ls(t, (Me.players[t] ? Me.players[t].d8 : "XX") + ": " + n)
+                Qe.ls(t, (new_player.players[t] ? new_player.players[t].d8 : "XX") + ": " + n)
             }
 
             function No(t) {
                 Ke = t[1];
                 const n = t[2];
-                for (let t = 0; t < n + 1; t++) Me.add_player(t, "", 0);
+                for (let t = 0; t < n + 1; t++) new_player.add_player(t, "", 0);
                 for (let t = 0; t < 20; t++) xe.lQ(t, "", 0);
-                for (let player, n = 0, e = t[3]; n < e.length; n++) player = e[n], Me.new_player(player[0], hi ? "Sploop" + player[0] : player[1], player[2], !![]);
+                for (let player, n = 0, e = t[3]; n < e.length; n++) player = e[n], new_player.new_player(player[0], hi ? "Sploop" + player[0] : player[1], player[2], !![]);
                 for (let n, e = 0, o = t[4]; e < o.length; e++) n = o[e], xe.lS(n[0], n[1], n[2]);
                 uc();
                 const e = t[5];
@@ -6859,7 +6841,7 @@
                 if (0 === bi) ro(pi.mc, pi.md, pi.port, pi._, pi.d8);
                 else {
                     if (!Pe) return;
-                    Wc(Fi.value), ve = 1
+                    Wc(nickname.value), ve = 1
                 }
             }
 
@@ -6918,8 +6900,8 @@
             }
 
             function nc(t) {
-                for (let n = 0; n < t[1].length; n++) Me.jE(t[1][n][0], t[1][n][1]);
-                Ie.gE(Me, t[1])
+                for (let n = 0; n < t[1].length; n++) new_player.jE(t[1][n][0], t[1][n][1]);
+                Ie.gE(new_player, t[1])
             }
 
             function ec() {
@@ -6952,14 +6934,14 @@
             }
 
             function oc() {
-                Fe.lz(), _i.style.display = "block", Ti.style.display = "none", qe = null, xe.lL.length = 0, mi.innerHTML = "Clans", uc()
+                Fe.lz(), create_clan.style.display = "block", leave_Clan.style.display = "none", qe = null, xe.lL.length = 0, clan_title.innerHTML = "Clans", uc()
             }
 
             function cc() {
-                _i.style.display = "none", Ti.style.display = "block";
+                create_clan.style.display = "none", leave_Clan.style.display = "block";
                 let t = Fo[1],
                     n = Fo[2];
-                qe = t, mi.innerHTML = xe.lM[qe].d8, T().hY(Ei);
+                qe = t, clan_title.innerHTML = xe.lM[qe].d8, T().hY(clan_menu_content);
                 for (let t = 3; t < Co; t++) bo(Fo[t], !![], n, t - 3)
             }
 
@@ -6979,7 +6961,7 @@
 
             function ac() {
                 let t = Fo[1];
-                T().hY(Ei);
+                T().hY(clan_menu_content);
                 for (let n = 2; n < Co; n++) bo(Fo[n], !![], t, n - 2)
             }
 
@@ -7000,7 +6982,7 @@
             }
 
             function uc() {
-                T().hY(Ei);
+                T().hY(clan_menu_content);
                 for (let t, n = 0, e = xe.lM; n < e.length; n++) t = e[n], t.active && bo(n, ![], ![])
             }
 
@@ -7032,11 +7014,11 @@
 
             function pc() {
                 const t = Fo[1];
-                Me.remove_player(t), Ie.gE(Me)
+                new_player.remove_player(t), Ie.gE(new_player)
             }
 
             function jc(t) {
-                Me.new_player(t[1], hi ? "Sploop" + t[1] : t[2], 0, !![])
+                new_player.new_player(t[1], hi ? "Sploop" + t[1] : t[2], 0, !![])
             }
 
             function mc() {
@@ -7080,7 +7062,7 @@
             }
 
             function Ac(t) {
-                io(![]), Te = !![], Oe = ze = t[1], Me.new_player(Ke, t[2], t[3], !![]), Be.l2(t[3]), Be.kr = t[4];
+                io(![]), Te = !![], Oe = ze = t[1], new_player.new_player(Ke, t[2], t[3], !![]), Be.l2(t[3]), Be.kr = t[4];
                 let n = t[5];
                 if (Be.l1(n[0], n[1], n[2], n[3]), Jo([bn().f9.eJ, t[6]]), t[7]) Zo(t[7][1], t[7][2], t[7][3]);
                 Be.gE(), Be.l6(), _o()
@@ -7094,7 +7076,7 @@
             }
 
             function Qc(t) {
-                ie(new Uint8Array([bn().fa.eh, ...je.encode(t)]))
+                ie(new Uint8Array([bn().fa.eh, ...text_encoder.encode(t)]))
             }
 
             function yc(t) {
@@ -7164,7 +7146,7 @@
             }
 
             function Hc(t) {
-                ie(new Uint8Array([bn().fa.ev, ...je.encode(t)]))
+                ie(new Uint8Array([bn().fa.ev, ...text_encoder.encode(t)]))
             }
 
             function Lc(t) {
