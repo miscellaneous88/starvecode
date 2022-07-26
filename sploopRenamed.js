@@ -1,4 +1,3 @@
-try{
 (function EXTERNAL(GLOB) {
     function c(t) {
         function n(t) {
@@ -7186,6 +7185,3 @@ try{
         }()
     })();
 })(6206277774457716);
-}catch(e){
-    
-}
