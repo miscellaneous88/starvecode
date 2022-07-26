@@ -6143,9 +6143,6 @@
             }
 
             function Yi(t) {
-                if (!t.isTrusted) return;
-                if (!t.target) return;
-                if (!t.type) return;
                 const n = Date.now(),
                     e = (n - Xe) / 1e3;
                 if (Xe = n, Ye.push(e), Ye.length >= 32) {
@@ -6169,7 +6166,6 @@
             }
 
             function Ji(t) {
-                if (!t.isTrusted) return;
                 Ne = t.clientX, We = t.clientY, Zi(Ne, We), to(He, Le), Bc(He, Le)
             }
 
@@ -6233,7 +6229,7 @@
 
             function new_wss_connection(t, n, e, o, c) {
                 if (pi.mc = t, pi.md = n, pi.port = e, pi._ = o, pi.d8 = c, bi = 1, Pi && Ni && (t = Wi || ![], n = Pi, e = Ni), c = c || "a server", J().gH("Connecting to " + c + "..."), wss) wss.close();
-                false_one = ![], _false = ![], Ke = 0, Oe = 0, false_ = ![], Ge.h9 = ![], wss = new _WebSocket("" + (t ? le : de) + ue + n + ke + (t ? he : e) + ge), ko(), Q(), Fe.n(), xe.n(), oc(), wss.binaryType = "arraybuffer", wss.onclose = t => {
+                false_one = ![], _false = ![], Ke = 0, Oe = 0, false_ = ![], Ge.h9 = ![], window.wss = new _WebSocket("" + (t ? le : de) + ue + n + ke + (t ? he : e) + ge), ko(), Q(), Fe.n(), xe.n(), oc(), wss.binaryType = "arraybuffer", wss.onclose = t => {
                     J().gI(), Do(t), bi = 0
                 }, wss.me = t => {
                     J().gI(), bi = 0
