@@ -51,7 +51,7 @@
                     return t = ![], i
                 }
             }();
-            r = console,
+            var r = console,
             f = Math,
             a = setTimeout,
             s = Date,
@@ -60,7 +60,7 @@
             u = Uint8Array,
             g = atob,
             h = WebSocket;
-        var k = {
+        var methods = {
                 9582: function (t, n, e) {
                     const o = function () {
                         let t = 0,
@@ -4050,7 +4050,7 @@
             var e = b[t] = {
                 exports: {}
             };
-            return k[t](e, e.exports, p), e.exports
+            return methods[t](e, e.exports, p), e.exports
         }! function () {
             const i = t(this, (function () {
                 return i.toString().search("(((.+)+)+)+$").toString().constructor(i).search("(((.+)+)+)+$")
@@ -5280,14 +5280,14 @@
                 Wt = 0,
                 Ht = ![];
 
-            function Lt(t) {
-                const n = t.code;
-                if ((ei || ii || oi) && n === At[_t.kj] && !Gt[n] && (ei && qi(![]), oi && Oi(![]), ii && To(![])), ei || oi) return;
-                if (!ei && !Gt[n] && n === At[_t.kk]) return oi && Oi(![]), ii && To(![]), qi(!![]), t.preventDefault(), void 0;
-                if (n === At[_t.km] && (oi && Oi(![]), qi(![]), To(!ii)), !ei && (t.code === At[_t.kd] && !Gt[n] && fo(!ti), n === At[_t.ke] && !Gt[n] && (ao(!$e), yc($e))), n === At[_t.kj] && Eo() && io(!![]), n === At[_t.fW] && !Gt[n] && Fc(2), n === At[_t.Y] && !Gt[n] && Fc(7), (n === At[_t.kb] && !Gt[n] || n === At[_t.kc] && !Gt[n]) && Fc(4), "Space" !== n && !isNaN(Number(t.key)) && !Gt[n]) {
-                    if (Number(t.key) - 1 >= 0) Cc(Be.kr[Number(t.key) - 1])
+            function Lt(event) {
+                const key = event.code;
+                if ((ei || ii || oi) && key === At[_t.kj] && !Gt[key] && (ei && qi(![]), oi && Oi(![]), ii && To(![])), ei || oi) return;
+                if (!ei && !Gt[key] && key === At[_t.kk]) return oi && Oi(![]), ii && To(![]), qi(!![]), event.preventDefault(), void 0;
+                if (key === At[_t.km] && (oi && Oi(![]), qi(![]), To(!ii)), !ei && (event.code === At[_t.kd] && !Gt[key] && fo(!ti), key === At[_t.ke] && !Gt[key] && (ao(!$e), yc($e))), key === At[_t.kj] && Eo() && io(!![]), key === At[_t.fW] && !Gt[key] && Fc(2), key === At[_t.Y] && !Gt[key] && Fc(7), (key === At[_t.kb] && !Gt[key] || key === At[_t.kc] && !Gt[key]) && Fc(4), "Space" !== key && !isNaN(Number(event.key)) && !Gt[key]) {
+                    if (Number(event.key) - 1 >= 0) Cc(Be.kr[Number(event.key) - 1])
                 }
-                n === At[_t.it] && !Gt[n] && xc(Li()), (n === At[_t.k7] || n === At[_t.kf]) && (Ct |= 1), (n === At[_t.k9] || n === At[_t.kg]) && (Ct |= 8), n === At[_t.kl] && Ze && Sc(Ze), (n === At[_t.ka] || n === At[_t.ki]) && (Ct |= 4), (n === At[_t.k8] || n === At[_t.kh]) && (Ct |= 2), Gt[n] = !![]
+                key === At[_t.it] && !Gt[key] && xc(Li()), (key === At[_t.k7] || key === At[_t.kf]) && (Ct |= 1), (key === At[_t.k9] || key === At[_t.kg]) && (Ct |= 8), key === At[_t.kl] && Ze && Sc(Ze), (key === At[_t.ka] || key === At[_t.ki]) && (Ct |= 4), (key === At[_t.k8] || key === At[_t.kh]) && (Ct |= 2), Gt[key] = !![]
             }
 
             function qt(t) {
@@ -5885,13 +5885,13 @@
             function Jn() {}
             const $n = [o().e2, o().e3];
             let te = h,
-                ne = null,
+                wss = null,
                 ee = {};
 
             function ie(t) {
-                if (!ne || 1 !== ne.readyState) return;
+                if (!wss || 1 !== wss.readyState) return;
                 if ("string" != typeof t) N(t);
-                ne.send(t)
+                wss.send(t)
             }
             ee[String("init")] = function () {}, ee[String("encode")] = function () {
                 for (;
@@ -5945,8 +5945,8 @@
                 return f.sqrt(t.map(t => f.pow(t - e, 2)).reduce((t, n) => t + n) / n)
             }
             const je = new TextEncoder;
-            let me = document.getElementById("game-canvas"),
-                we = me.getContext("2d"),
+            let canvas = document.getElementById("game-canvas"),
+                Context = canvas.getContext("2d"),
                 Te = ![],
                 _e = fe,
                 ve = 0,
@@ -6091,7 +6091,7 @@
             }
 
             function zi() {
-                me.oncontextmenu = () => ![], me.onmousedown = t => Yi(t), me.onmouseup = t => Ji(t), window.addEventListener("mousemove", t => Xi(t), ![]), window.onkeydown = t => oo(t), window.onkeyup = t => co(t), window.addEventListener("resize", t => so(t), ![]), me.addEventListener("touchstart", t => Ot(t), ![]), me.addEventListener("touchmove", t => Kt(t), ![]), me.addEventListener("touchend", t => zt(t), ![]), me.addEventListener("touchcancel", t => zt(t), ![]), me.addEventListener("touchleave", t => zt(t), ![]), Ii.addEventListener("click", t => Oo(t)), wi.addEventListener("mousedown", t => {
+                canvas.oncontextmenu = () => ![], canvas.onmousedown = t => Yi(t), canvas.onmouseup = t => Ji(t), window.addEventListener("mousemove", t => Xi(t), ![]), window.onkeydown = t => oo(t), window.onkeyup = t => co(t), window.addEventListener("resize", t => so(t), ![]), canvas.addEventListener("touchstart", t => Ot(t), ![]), canvas.addEventListener("touchmove", t => Kt(t), ![]), canvas.addEventListener("touchend", t => zt(t), ![]), canvas.addEventListener("touchcancel", t => zt(t), ![]), canvas.addEventListener("touchleave", t => zt(t), ![]), Ii.addEventListener("click", t => Oo(t)), wi.addEventListener("mousedown", t => {
                     Oi(!oi)
                 }), vi.addEventListener("mousedown", t => {
                     Kc()
@@ -6142,10 +6142,7 @@
                 He = t * Ve / Ae, Le = n * Ve / Ae
             }
 
-            function Yi(t) {
-                if (!t.isTrusted) return;
-                if (!t.target) return;
-                if (!t.type) return;
+            function Yi(event) {
                 const n = s.now(),
                     e = (n - Xe) / 1e3;
                 if (Xe = n, Ye.push(e), Ye.length >= 32) {
@@ -6160,7 +6157,7 @@
                     Ye.length = 0
                 }
                 if (Je && e > Je) return;
-                nn(![]), Ne = t.clientX, We = t.clientY, Zi(Ne, We), !$i(He, Le) && xc(Li())
+                nn(![]), Ne = event.clientX, We = event.clientY, Zi(Ne, We), !$i(He, Le) && xc(Li())
             }
 
             function Xi(t) {
@@ -6216,30 +6213,22 @@
             }
 
             function oo(t) {
-                if (!Te) return;
-                if (!(t instanceof window.KeyboardEvent)) return;
-                if (!t.isTrusted) return;
-                if (!t.target) return;
                 Lt(t)
             }
 
             function co(t) {
-                if (!Te) return;
-                if (!(t instanceof window.KeyboardEvent)) return;
-                if (!t.isTrusted) return;
-                if (!t.target) return;
                 qt(t)
             }
 
             function ro(t, n, e, o, c) {
-                if (pi.mc = t, pi.md = n, pi.port = e, pi._ = o, pi.d8 = c, bi = 1, Pi && Ni && (t = Wi || ![], n = Pi, e = Ni), c = c || "a server", J().gH("Connecting to " + c + "..."), ne) ne.close();
-                Pe = ![], Te = ![], Ke = 0, Oe = 0, Re = ![], Ge.h9 = ![], ne = new te("" + (t ? le : de) + ue + n + ke + (t ? he : e) + ge), ko(), Q(), Fe.n(), xe.n(), oc(), ne.binaryType = "arraybuffer", ne.onclose = t => {
+                if (pi.mc = t, pi.md = n, pi.port = e, pi._ = o, pi.d8 = c, bi = 1, Pi && Ni && (t = Wi || ![], n = Pi, e = Ni), c = c || "a server", J().gH("Connecting to " + c + "..."), wss) wss.close();
+                Pe = ![], Te = ![], Ke = 0, Oe = 0, Re = ![], Ge.h9 = ![], wss = new te("" + (t ? le : de) + ue + n + ke + (t ? he : e) + ge), ko(), Q(), Fe.n(), xe.n(), oc(), wss.binaryType = "arraybuffer", wss.onclose = t => {
                     J().gI(), Do(t), bi = 0
-                }, ne.me = t => {
+                }, wss.me = t => {
                     J().gI(), bi = 0
-                }, ne.onopen = t => {
+                }, wss.onopen = t => {
                     J().gI(), Go(t), bi = 2
-                }, ne.onmessage = t => {
+                }, wss.onmessage = t => {
                     Ro(t)
                 }
             }
@@ -6253,8 +6242,8 @@
             }
 
             function so() {
-                if (Ve = ui ? window.devicePixelRatio : 1, me.width = window.innerWidth * Ve, me.height = window.innerHeight * Ve, me.style.width = window.innerWidth + "px", me.style.height = window.innerHeight + "px", Di = me.width, Vi = me.height, Hi(), window.innerHeight / 1080 < window.innerWidth / 1920);
-                Ri = me.width / Ae, Gi = me.height / Ae, we.setTransform(Ae, 0, 0, Ae, 0, 0), _o()
+                if (Ve = ui ? window.devicePixelRatio : 1, canvas.width = window.innerWidth * Ve, canvas.height = window.innerHeight * Ve, canvas.style.width = window.innerWidth + "px", canvas.style.height = window.innerHeight + "px", Di = canvas.width, Vi = canvas.height, Hi(), window.innerHeight / 1080 < window.innerWidth / 1920);
+                Ri = canvas.width / Ae, Gi = canvas.height / Ae, Context.setTransform(Ae, 0, 0, Ae, 0, 0), _o()
             }
 
             function lo(t = !![]) {
@@ -6273,12 +6262,12 @@
 
             function go() {
                 if (gi++ % 128 == 0) Jn();
-                we.clearRect(0, 0, Ri, Gi);
+                Context.clearRect(0, 0, Ri, Gi);
                 const t = +new s,
                     n = (t - ni) / 1e3;
                 ni = t;
                 const e = U.get(ze);
-                e && ye.gE(e.gU, e.gV, n), Pe && (B(n, t), !!Oe && vo(n)), we.save(), Io(we, n), we.restore(), Te ? (we.save(), Qo(we, n), we.restore()) : Hn().h9(), window.requestAnimationFrame(go)
+                e && ye.gE(e.gU, e.gV, n), Pe && (B(n, t), !!Oe && vo(n)), Context.save(), Io(Context, n), Context.restore(), Te ? (Context.save(), Qo(Context, n), Context.restore()) : Hn().h9(), window.requestAnimationFrame(go)
             }
 
             function ho() {
@@ -6651,7 +6640,7 @@
                         Wo(t);
                         break;
                     case bn().f9.f6:
-                        ne.send(window[Nn().g("solve")](t[1]));
+                        wss.send(window[Nn().g("solve")](t[1]));
                         break;
                     case bn().f9.ey:
                         Ac(t);
